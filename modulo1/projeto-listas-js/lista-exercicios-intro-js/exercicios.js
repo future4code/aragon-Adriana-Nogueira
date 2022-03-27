@@ -17,121 +17,112 @@ function imprimeMensagem() {
 // EXERCÍCIOS PARA FAZER ------------------------------------------------------------------
 
 // EXERCÍCIO 01
-
-
-
-function calculaAreaRetangulo(altura, largura){
-//implmente sua lógica aqui
-const largura1 = Number(prompt("Digite o valor largura"))
-const altura1 = Number(prompt("Digite o valor altura"))
-console.log(largura1*altura1)
-return largura1 * altura1
-
-
-
+function calculaAreaRetangulo() {
+  // implemente sua lógica aqui
+const altura = Number(prompt("Diga o tamanho da altura"))
+const largura = Number(prompt("Diga o tamanho da largura"))
+console.log(altura  * largura)
 }
-
-const multiplica = calculaAreaRetangulo()
-
- 
 
 // EXERCÍCIO 02
- 
-function imprimeIdade(ano1, ano2) {
-  const anoaAtual = Number (prompt("Digite o ano do aniversario"))
-  const anoAniversario = Number (prompt("Digite o ano do aniversario"))  
-  console.log(anoaAtual - anoAniversario)
-
+function imprimeIdade() {
+  // implemente sua lógica aqui
+  const anoAtual = Number(prompt("Diga o ano atual"))
+  const anoAniversario = Number(prompt("Diga o ano do aniversario"))
+ console.log(anoAtual - anoAniversario) 
 }
 
-  
 // EXERCÍCIO 03
 
-const valorPeso =  Number (prompt("Digite o valor peso"))
-const ValorAltura =  Number(prompt("Digite o valor altura"))
 function calculaIMC(peso, altura) {
-  // implemente sua lógica aqui
- return peso / (altura * altura)
-  
-}
+// implemente sua lógica aqui
 
-calculaIMC(85,1.8)
+return peso / (altura * altura)
+}
+const peso1 = Number(prompt("Digite valor do peso"))
+const altura1 = Number(prompt("Digite valor da altura"))
+const valorIMC = calculaIMC(85,1.8)
+
 
 
 // EXERCÍCIO 04
+function imprimeInformacoesUsuario() {
+  // implemente sua lógica aqui
+  // "Meu nome é NOME, tenho IDADE anos, e o meu email é EMAIL."
+  const nome = (prompt("Digite seu nome"))
+  const idade = Number(prompt("Digite sua idade"))
+  const email = (prompt("Digite seu email"))
+console.log(`Meu nome é ${nome}, tenho ${idade} anos, e o meu email é ${email}.`)
 
-function imprimeInformacoesUsuario(){
-  
-  
- const nome1 = prompt("Digite o  nome")
- const idade2 = Number(prompt("Digite idade"))
- const email3 = prompt("DIgite email")
- console.log(`Meu nome é ${nome1}, tenho ${idade2} anos, e o meu email é ${email3}.`)
 }
 
-imprimeInformacoesUsuario("Alice", 28, "alice@gmail.com")
-
-imprimeInformacoesUsuario("João", 25, "joao@gmail.com")
 
 
 // EXERCÍCIO 05
-
-
-//function imprimeTresCoresFavoritas() {
+function imprimeTresCoresFavoritas() {
   // implemente sua lógica aqui
-//const cores1 = prompt([" Qual a sua cor favorita?" ])
-//const cores2 = prompt(["Digite outra cor favorita"])
-//const cores3 = prompt([" Digita mais uma cor favorita"])
-//const listaCores = []
-//listaCores.push(cores1, cores2, cores3)
-//return listaCores
+  const cor1 = prompt("Digite uma cor")
+  const cor2 = prompt("Digite outra cor")
+  const cor3 = prompt("Digite a terceira cor")
+  const cores = [ cor1, cor2, cor3]
+  console.log(cores)
 
-
-//}
-
-//console.log(imprimeTresCoresFavoritas())
-
-
+}
 
 // EXERCÍCIO 06
- function imprimeNomeString (string) {
-// implemente sua lógica aqui
-const nomeString = prompt("Digite a string")
-return nomeString.toUpperCase()
-
-  }
-imprimeNomeString()
-
-
+function retornaStringEmMaiuscula(string) {
+  // implemente sua lógica aqui
+  return string.toUpperCase()
+}
+const stringFrase = prompt("Digite uma palavra")
+const StringPalavra = retornaStringEmMaiuscula("bAnAnA")
 // EXERCÍCIO 07
 function calculaIngressosEspetaculo(custo, valorIngresso) {
   // implemente sua lógica aqui
-
+return custo / valorIngresso
 }
+calculaIngressosEspetaculo(3000,10)
 
 // EXERCÍCIO 08
+
+const nomeString1 = prompt("Digite uma string")
+const nomeString2 = prompt("Digite a segunda string")
 function checaStringsMesmoTamanho(string1, string2) {
-  // implemente sua lógica aqui
+ // implemente sua lógica aqui
+
+console.log(nomeString1.length === nomeString2.length)
+return string1.length === string2.length
 
 }
+checaStringsMesmoTamanho("Olá","abc")
+
 
 // EXERCÍCIO 09
+
 function retornaPrimeiroElemento(array) {
-  // implemente sua lógica aqui
+ // implemente sua lógica 
+return array [0]
 
 }
+const NovaArrray  = [1,2,3]
+console.log(retornaPrimeiroElemento(NovaArrray))
+
 
 // EXERCÍCIO 10
 function retornaUltimoElemento(array) {
   // implemente sua lógica aqui
-
+return array.pop()
 }
+const NovaArray2 = [1,2,3,4,5]
+console.log(retornaUltimoElemento(NovaArray2))
 
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
   // implemente sua lógica aqui
+  return array.push(array.splice(0,1)[0])
 
 }
+const novaArray3 = [1,2,3,4,5]
 
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
