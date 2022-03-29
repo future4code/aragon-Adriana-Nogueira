@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../praticando/exercicios1/lista-exercicios-intro-js"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../praticando/exercicios1/variaveis/template_javascript"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "template_javascript"
+	}
+}
