@@ -167,3 +167,26 @@ console.log(nomeObjeto)
  inserirNome( )
 
 // Desafio 2
+function compraAnoDeLancamento(primeiroFilme, segundoFilme){
+return `O primeiro filme foi lançado antes do segundo?${primeiroFilme.anoDeLancamento < segundoFilme.anoDeLancamento}
+O primeiro filme foi lançado no mesmo ano o segundo? ${primeiroFilme.anoDeLancamento === segundoFilme.anoDeLancamento}`
+}
+const avengers = {
+	nome: "The Avengers",
+	anoDeLancamento: 2012
+}
+const doutorestranho = {
+	nome: "Doutor Estranho",
+
+	anoDeLancamento: 2016	
+}
+console.log(compraAnoDeLancamento(avengers,doutorestranho))
+
+
+// Desafio 3
+
+function verificarFruta(carrinho){
+return { ...carrinho, disponibilidade: !carrinho.disponibilidade}
+}
+console.log(verificarFruta(morango))
+console.log(verificarFruta(verificarFruta(morango)))
