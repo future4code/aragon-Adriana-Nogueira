@@ -78,3 +78,21 @@ console.log(frasePopular)
 frutas = ["Banana","Morango","Abacaxi","Laranja","Ameixa"]
 const frutasindice = frutas[2]
 console.log(frutas.length , frutasindice)
+
+
+// desafio
+
+1.
+
+// const minhaFrase = "Eu amo Javascript!"
+// const minhaFraseArray = minhaFrase.split(" ")
+// console.log(minhaFraseArray)
+
+// 2.
+
+const frutas = ["Banana", "Morango", "Abacaxi", "Laranja", "Ameixa"];
+
+const indexAbabaxi = frutas.indexOf("Abacaxi");
+const tamanhoArray = frutas.length;
+
+console.log("Index abacaxi: ", indexAbabaxi, "tamanho do array:", tamanhoArray);
