@@ -34,7 +34,8 @@ div>p:first-child {
 }
 
 div img {
-    background: black;
+    display: inline;
+
 }
 
 .botao-amarelo {
@@ -62,6 +63,7 @@ div img {
 
 .icone {
     height: 15px;
+    width: auto;
 }
 
 
@@ -75,10 +77,13 @@ div img {
     padding: 23;
     background-color: #2274a5;
     color: white;
+    text-align: center;
 }
 
-#container-de-descricao>ol {
-    padding: 15px 0px;
+#container-de-descricao > ol {
+  display: auto;
+  margin:1%;
+    
 }
 
 #container-para-comprar {
@@ -101,11 +106,19 @@ div img {
 div:nth-child(2),
 div:last-child {
     text-align: center;
+    
+   
 }
+    
 
 table {
-    width: 60%;
+    
+    
     text-align: center;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
     
 }
 
@@ -118,7 +131,7 @@ td button {
 }
 
 .container-do-search {
-    margin-top: 20px;
+    margin-top: 30px;
     height: 100px;
 }
 
