@@ -55,6 +55,7 @@ div img {
 }
 
 .container {
+    padding: 2%;
     height: 500px;
     text-align: center;
 }
@@ -71,6 +72,7 @@ div img {
   **/
 
 #container-de-descricao {
+    padding: 23;
     background-color: #2274a5;
     color: white;
 }
