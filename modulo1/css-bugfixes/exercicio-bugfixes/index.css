@@ -19,6 +19,7 @@ h2 {
 input {
     height: 20px;
     width: 500px;
+    
 }
 
 button:focus {
@@ -58,6 +59,7 @@ div img {
     padding: 2%;
     height: 500px;
     text-align: center;
+    
 }
 
 .icone {
@@ -72,7 +74,7 @@ div img {
   **/
 
 #container-de-descricao {
-    padding: 23;
+    
     background-color: #2274a5;
     color: white;
 }
@@ -105,6 +107,7 @@ div:last-child {
 
 table {
     width: 60%;
+    text-align: center;
 }
 
 td button {
