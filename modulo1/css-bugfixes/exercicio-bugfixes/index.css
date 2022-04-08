@@ -4,9 +4,13 @@
   *
   **/
 
-* {
+  
+   * {
     margin: 0;
     padding: 0;
+    font-family:minhaFonte;
+
+
 }
 
 h2 {
@@ -14,6 +18,9 @@ h2 {
     padding: 10px 5px 10px 5px;
     color: white;
     text-align: center;
+    font-family:minhaFonte;
+
+    
 }
 
 input {
@@ -35,6 +42,7 @@ img {
 
 div>p:first-child {
     display: inline;
+    font-family: minhaFonte;
 }
 
 div img {
@@ -63,6 +71,7 @@ div img {
     padding: 2%;
     height: 500px;
     text-align: center;
+    font-family: minhaFonte;
 }
 
 .icone {
@@ -82,22 +91,28 @@ div img {
     background-color: #2274a5;
     color: white;
     text-align: center;
+    font-family: minhaFonte;
 }
 
 #container-de-descricao > ol {
   display: auto;
   margin:1%;
+  font-family: minhaFonte;
+
+
     
 }
 
 #container-para-comprar {
     background-color: #e7eb90;
+    font-family: minhaFonte;
 }
 
 #container-para-comprar>p {
     color: #c44f00;
     padding: 100px 0;
     font-size: 60px;
+    font-family: minhaFonte;
 }
 
 
@@ -110,6 +125,7 @@ div img {
 div:nth-child(2),
 div:last-child {
     text-align: center;
+    font-family: minhaFonte;
     
     
    
@@ -124,6 +140,7 @@ table {
     margin-left: auto;
     margin-right: auto;
     width: 960px;
+    font-family: minhaFonte;
     
 }
 
