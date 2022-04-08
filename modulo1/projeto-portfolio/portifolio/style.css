@@ -6,6 +6,12 @@ body{
     font-family: 'Poppins', sans-serif;
     color: #1E1E2A;
 }
+img{
+    display: block;
+    display: inline-flex;
+    margin-left:  960px;;
+
+}
 
 /* HEADER */
 
@@ -48,6 +54,12 @@ h2{
 a:hover{
     background-color: #ffff;
 }
+img{
+    width: 200px;
+    height: 300px;
+
+}
+
 
 /* menu*/
 
