@@ -76,6 +76,7 @@ div img {
     height: 500px;
     text-align: center;
     font-family: minhaFonte;
+list-style-position:inside; 
 }
 
 .icone {
@@ -114,6 +115,11 @@ div img {
 #container-para-comprar {
     background-color: #e7eb90;
     font-family: minhaFonte;
+    display: block;
+    width: auto;
+    height: auto;
+    text-align: center;
+
 }
 
 #container-para-comprar>p {
@@ -152,11 +158,13 @@ table {
 }
 
 td button {
+
     background-color: #fadf63;
     width: 150px;
     height: 30px;
     border-radius: 5px;
     color: black;
+
 }
 td button:hover{
     background-color: burlywood;
@@ -183,6 +191,9 @@ td button:hover{
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    text-align: center;
+    position: relative;
+
 }
 
 #back-button:hover {
