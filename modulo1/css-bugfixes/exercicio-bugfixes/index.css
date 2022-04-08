@@ -95,10 +95,12 @@ div img {
 }
 
 #container-de-descricao > ol {
-  display: auto;
-  margin:1%;
+  display: inline;
+  margin:10px;
+  width: 100%;
+ text-align: center;
   font-family: minhaFonte;
-
+  list-style-position: inside;
 
     
 }
@@ -141,6 +143,7 @@ table {
     margin-right: auto;
     width: 960px;
     font-family: minhaFonte;
+   
     
 }
 
