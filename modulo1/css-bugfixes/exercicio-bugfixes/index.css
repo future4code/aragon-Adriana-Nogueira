@@ -34,6 +34,9 @@ input {
 
 button:focus {
     color: white;
+
+    
+    
 }
 
 img {
@@ -45,7 +48,7 @@ img:hover{
 }
 
 div>p:first-child {
-    display: inline;
+    display: block;
     font-family: minhaFonte;
 }
 
@@ -55,15 +58,16 @@ div img {
 }
 
 .botao-amarelo {
-    position: relative;
+
     background-color: #ffaf43;
     width: 250px;
-    height: 40px;
-    border-radius: 5px;
+    height: 50px;
+    border-radius: 10px;
     font-size: 20px;
     color: white;
-    margin: 50px;
-    
+    position:relative;   
+   
+ 
 }
 
 .botao-amarelo:hover {
@@ -72,11 +76,11 @@ div img {
 }
 
 .container {
+   
+    font-family: minhaFonte;
     padding: 2%;
     height: 500px;
     text-align: center;
-    font-family: minhaFonte;
-list-style-position:inside; 
 }
 
 .icone {
@@ -94,7 +98,7 @@ list-style-position:inside;
   **/
 
 #container-de-descricao {
-    padding: 23;
+    padding: 23px;
     background-color: #2274a5;
     color: white;
     text-align: center;
@@ -106,7 +110,7 @@ list-style-position:inside;
   margin: 20px;
   width: 100%;
   font-family: minhaFonte;
-  list-style-position: inside;
+  
   
 
     
@@ -114,11 +118,7 @@ list-style-position:inside;
 
 #container-para-comprar {
     background-color: #e7eb90;
-    font-family: minhaFonte;
-    display: block;
-    width: auto;
-    height: auto;
-    text-align: center;
+    
 
 }
 
@@ -185,14 +185,14 @@ td button:hover{
 #back-button {
   
     background-color: white;
-    width: 100px;
-    height: 20px;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 10px;
-    color: black;
     text-align: center;
-    position: relative;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    font-family: minhaFonte;
+    color: black;
+
 
 }
 
