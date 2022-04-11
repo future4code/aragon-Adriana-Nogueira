@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body{
+    background-color:#f2d0e0 ;
+}
+header{
+    display: flex;
+    background-color:mediumvioletred ;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header > div{
+    display: flex;
+    align-items: center;
+}
+header img{
+    width: 20px;
+    height: 15px;
+}
+header >button{
+    margin-right: 10px;
+    padding: 0 10px;
+    border-radius: 0px;
+
+
+}
+footer{
+    background-color:mediumvioletred ;
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    border: 1px solid black;
+    align-items: center;
+
+}
+body main div p{
+    font-size: 15px;
+}
+main{
+    display: flex;
+   
+}
+nav{
+    background-color: #f2d0e0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 270px;
+}
+
+nav div{
+    display: flex;
+
+}
+
+nav > div > p{
+    padding-right: 100px;
+}
+nav img{
+    width: 20px;
+    margin-right: 10px;
+    
+}
+nav .card{
+    display: flex;
+    justify-content: space-between;
+
+}
+.card img{
+    height:20px;
+}
+
+.flecha{
+    padding-top: 10px;
+}
+.texotHome{
+    display: flex;
+    padding: 10px 0;
+}
+.espaco.simbolo{
+padding-left: 0.4vw;
+}
+
+.catalogo{
+   padding-top:20px;
+   padding-bottom: 20px;
+   padding-left: 20px;
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   row-gap: 20px;
+    column-gap: 20px;
+}
+.item{ 
+    width: 235px;
+    text-align: center;
+    box-shadow: 2px 2px 5px darkgray;
+}
+.item > img{
+    width: 100%;
+    
+
+}
+.item h4{
+    margin-bottom: 15px;
+}
