@@ -1,0 +1,377 @@
+[33mcommit d828a768ef5f24b35f9288fb833d19f3fe6d3cb6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Thu Apr 7 23:00:28 2022 -0300
+
+    Não consegui finalizar o restante
+
+[33mcommit 29dd972d07d4d8bd9d898995fcfedcd0481eda55[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Thu Apr 7 22:40:59 2022 -0300
+
+    Efetuei o hover na img da lupa e ativei o button
+
+[33mcommit 603794861ee03ec4b7d5119366a5be7a8c69d6dd[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Thu Apr 7 22:19:37 2022 -0300
+
+    Não consegui centralizar a linha dos numeros
+
+[33mcommit 8acc75e90e855f23e830d852f00fe2e764f17051[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Thu Apr 7 22:04:44 2022 -0300
+
+    Alterado a fonte nas paginas
+
+[33mcommit 4396c62e58cd73a29f150baedca60525631d984a[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Thu Apr 7 21:00:15 2022 -0300
+
+    Utilizei o border-top, right, left para retirar as bordas
+
+[33mcommit 86ad697c09e0db0bb05083b25642080bd88bd1e0[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Thu Apr 7 20:40:04 2022 -0300
+
+    Apliquei o hover para mudara cor ao passar o mouse
+
+[33mcommit bc285eb394075f2d4505ae7528333cbc28925ab5[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Thu Apr 7 20:26:54 2022 -0300
+
+    Tirando o background preto da img visualizamos a lupa
+
+[33mcommit 6f411307741b3a6096ec1ce4a5400b2d083daea6[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Thu Apr 7 17:35:30 2022 -0300
+
+    Criei um height=80 px em todas as imagens
+
+[33mcommit ff332b172992301789e2c25f551aa5ea905b534f[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Thu Apr 7 16:53:59 2022 -0300
+
+    Alinhei a tabela com text aling center usado no table
+
+[33mcommit a2687ec9f1e8b85a08aafce0fac33da78c84621b[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Thu Apr 7 16:43:29 2022 -0300
+
+    Dividi a frase em paragrafos
+
+[33mcommit dfc52010288380dfec60a30b5bd63169b9736cb1[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Thu Apr 7 16:22:01 2022 -0300
+
+    Acrescentei o padding 2%
+
+[33mcommit 1c5178d94d3ffc90e86dbf4f901dfcde79cf8fff[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Thu Apr 7 16:17:18 2022 -0300
+
+    Para colocar o botao na lateral usei o position relative
+
+[33mcommit 834e52068375e8852f43eccc68624d773a9c6be6[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Thu Apr 7 15:51:54 2022 -0300
+
+    href implantando com o link da home html
+
+[33mcommit 973f83cebc744e9c17d695f166c908fa408ad0c9[m[33m ([m[1;31morigin/css-bugfixes[m[33m, [m[1;32mcss-bugfixes[m[33m)[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Mon Apr 4 19:38:25 2022 -0300
+
+    Revisão-JS
+
+[33mcommit 9704e950cd569572ddc5f83dfc43759811cac0de[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 43d1700 a061cdb
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Fri Apr 1 13:06:11 2022 -0300
+
+    Merge pull request #23 from future4code/funcoes-de-array
+    
+    Funções de array
+
+[33mcommit a061cdb914e695a2e4782164872f5c6944333ed9[m[33m ([m[1;31morigin/funcoes-de-array[m[33m, [m[1;32mfuncoes-de-array[m[33m)[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Thu Mar 31 18:57:21 2022 -0300
+
+    Funções de array
+
+[33mcommit 43d17006c67a011998679e039f3e1a33304184de[m
+Merge: a2b286c f2fcc4e
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Thu Mar 31 08:37:04 2022 -0300
+
+    Merge pull request #22 from future4code/lacos
+    
+    Exercicios Laços
+
+[33mcommit a2b286cb26ca14075072fe4a26c0e6c0d22a1f03[m
+Merge: 562d23a 39bfbf4
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Thu Mar 31 08:36:50 2022 -0300
+
+    Merge pull request #20 from future4code/condicionais
+    
+    Exercicios Condicionais
+
+[33mcommit 562d23a6b54efe3850c2c79d02415b8ba14c9198[m
+Merge: c0dac22 4932cee
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Thu Mar 31 08:36:38 2022 -0300
+
+    Merge pull request #21 from future4code/strings-arrays
+    
+    Strings-arrays
+
+[33mcommit f2fcc4e710518c90846b7d2400c73ce593178db1[m[33m ([m[1;31morigin/lacos[m[33m, [m[1;32mlacos[m[33m)[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Wed Mar 30 21:11:30 2022 -0300
+
+    Exercicios Laços
+
+[33mcommit 4932cee83e4d0eb110dc73c57b082446b7e1bfab[m[33m ([m[1;31morigin/strings-arrays[m[33m, [m[1;32mstrings-arrays[m[33m)[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Wed Mar 30 08:26:16 2022 -0300
+
+    Strings-arrays
+
+[33mcommit 39bfbf4a1d2d41e327757b243413102dd30a5c2d[m[33m ([m[1;31morigin/condicionais[m[33m, [m[1;32mcondicionais[m[33m)[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Tue Mar 29 19:38:25 2022 -0300
+
+    Exercicios Condicionais
+
+[33mcommit c0dac22ecb0a8fa14f7164753bc6c27624f63d58[m
+Merge: cff4b0d b3734e5
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Tue Mar 29 12:48:20 2022 -0300
+
+    Merge pull request #18 from future4code/projet-lista-js
+    
+    Projeto-lista-Js
+
+[33mcommit b3734e5465518b7ddbc832019e666b223a371d63[m[33m ([m[1;31morigin/projet-lista-js[m[33m, [m[1;32mprojet-lista-js[m[33m)[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Sun Mar 27 19:33:51 2022 -0300
+
+    Projeto-lista-Js
+
+[33mcommit cff4b0ddbece183229fbcd69fa4ccb18f00753c1[m
+Merge: e3460e4 64ac696
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Fri Mar 25 23:53:50 2022 -0300
+
+    Merge pull request #17 from future4code/funcoes
+    
+    Funcoes
+
+[33mcommit 1ae2fb0e3898bce9323e6bde45c8e59b67d2a67e[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Fri Mar 25 23:47:18 2022 -0300
+
+    Projeto-lista-Js
+
+[33mcommit 64ac696aac2e7090aae57ca67492fccb256873ac[m[33m ([m[1;31morigin/funcoes[m[33m, [m[1;32mfuncoes[m[33m)[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Thu Mar 24 20:37:50 2022 -0300
+
+    Funcoes
+
+[33mcommit e3460e4dc31f5477f0ad0f97be8c984b4798797a[m
+Merge: cdfff53 c045f99
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Thu Mar 24 08:48:16 2022 -0300
+
+    Merge pull request #16 from future4code/strings-arrays
+    
+    Strings e Arrays
+
+[33mcommit c045f99d9f2ddb3dce629aabd6f371a4520d3403[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Wed Mar 23 18:39:36 2022 -0300
+
+    Strings e Arrays
+
+[33mcommit cdfff538d134a6c8a0f7d946504d2935a78b0470[m
+Merge: d48ed64 dfa2195
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Wed Mar 23 10:45:03 2022 -0300
+
+    Merge pull request #15 from future4code/operadores
+    
+    Operadores
+
+[33mcommit dfa2195d37817d43249eb8669807daf4e6979e68[m[33m ([m[1;31morigin/operadores[m[33m, [m[1;32moperadores[m[33m)[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Tue Mar 22 18:58:16 2022 -0300
+
+    Operadores
+
+[33mcommit d48ed6462caddd0227b3b5d75f38b00dc6aa40f5[m
+Merge: 1040548 c3867a1
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Tue Mar 22 10:36:25 2022 -0300
+
+    Merge pull request #12 from future4code/projeto-readme
+    
+    Projeto readme
+
+[33mcommit 1040548fd71fe4972dd9a93dd09c548b8dbee89e[m
+Merge: f76d9fa 22a0fd1
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Tue Mar 22 10:36:10 2022 -0300
+
+    Merge pull request #14 from future4code/variaveis
+    
+    Variaveis
+
+[33mcommit 22a0fd14a92d1867fa56c79f65da7ca155401308[m[33m ([m[1;31morigin/variaveis[m[33m, [m[1;32mvariaveis[m[33m)[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Mon Mar 21 18:44:49 2022 -0300
+
+    Variaveis
+
+[33mcommit c3867a19b3da0b402cba642f130e824a31ee932f[m[33m ([m[1;31morigin/projeto-readme[m[33m)[m
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Mon Mar 21 14:02:16 2022 -0300
+
+    Delete modulo3/aula-git/sobre-mim directory
+
+[33mcommit 7e448f16100abd3257b85d21d107b01307e21ff8[m
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Mon Mar 21 14:01:39 2022 -0300
+
+    Delete modulo4 directory
+
+[33mcommit f76d9fae280442ef37025ec8720ad3b929a45391[m[33m ([m[1;31morigin/projeto-readme1[m[33m, [m[1;32mprojeto-readme1[m[33m)[m
+Merge: 7722503 c25c1bb
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Mon Mar 21 13:14:52 2022 -0300
+
+    Merge pull request #11 from future4code/git-2
+    
+    Git 2
+
+[33mcommit c25c1bb6ee82e0a83b3668f43fc760f4f7f14f31[m[33m ([m[1;31morigin/git-2[m[33m, [m[1;32mgit-2[m[33m)[m
+Merge: 5840bbb b3c7fd3
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Mon Mar 21 12:30:03 2022 -0300
+
+    Merge branch 'git-2' of https://github.com/future4code/aragon-Adriana-Nogueira into git-2
+
+[33mcommit 5840bbbd9afe0271f20a377b5a92fd27d95a985d[m
+Author: AdrianaGazato <adrianabnoliveira@gmail.com>
+Date:   Thu Mar 17 15:56:00 2022 -0300
+
+    Musicas Preferidas
+    
+    bash: linha 1: c: comando não encontrado
+
+[33mcommit 7722503e3541f2fb35eae4cee2f05c726a59e8d1[m
+Merge: 67f0285 90a03cf
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Mon Mar 21 10:21:54 2022 -0300
+
+    Merge pull request #8 from future4code/projeto-readme
+    
+    Projeto readme
+
+[33mcommit 67f028573310ccbee9c18460f94f5105487f2ad6[m
+Merge: b695194 d052021
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Mon Mar 21 10:21:35 2022 -0300
+
+    Merge pull request #9 from future4code/git-5
+    
+    Git 5
+
+[33mcommit b695194bcb8be942b0debe773b498351a6294fd7[m
+Merge: 2273d8b b3c7fd3
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Mon Mar 21 10:21:13 2022 -0300
+
+    Merge pull request #10 from future4code/git-2
+    
+    Musicas
+
+[33mcommit 90a03cfd381f4d14c31cc926d53310cb9ac1f103[m[33m ([m[1;32mprojeto-readme[m[33m)[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Fri Mar 18 15:05:53 2022 -0300
+
+    Minhas musicas
+
+[33mcommit d106fb8e29e32ccbc1ef34aa1b82ac0880a32427[m
+Author: Adrianagazato <adrianabnoliveira@gmail.com>
+Date:   Fri Mar 18 14:53:56 2022 -0300
+
+    Aprendizado da semana
+
+[33mcommit 2273d8b92729577b10b8d81c08e594ca03bc1ac3[m
+Merge: 81a3641 a3ef230
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Fri Mar 18 14:41:22 2022 -0300
+
+    Merge pull request #3 from future4code/git-3
+    
+    Filmes Favoritos
+
+[33mcommit 81a364108f7bb9c43b83928395e9757d1946a76e[m
+Merge: 7808003 4767873
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Fri Mar 18 14:40:48 2022 -0300
+
+    Merge pull request #1 from future4code/git-1
+    
+    minha-bio.txt
+
+[33mcommit 78080038a456e04c886fd46e0879350db1f3cdf0[m
+Merge: b9642d0 776840a
+Author: Adriana Borges Nogueira <98770327+Adrianagazato@users.noreply.github.com>
+Date:   Fri Mar 18 14:40:10 2022 -0300
+
+    Merge pull request #4 from future4code/git-4
+    
+    Comidas preferidas
+
+[33mcommit d0520211890ea543e46c71f839973ab5f7c71832[m[33m ([m[1;31morigin/git-5[m[33m, [m[1;32mgit-5[m[33m)[m
+Author: AdrianaGazato <adrianabnoliveira@gmail.com>
+Date:   Thu Mar 17 16:35:54 2022 -0300
+
+    Redes Sociais
+
+[33mcommit 1e0df003ae7b01c953ba92c4cfc2da12e3ccc74e[m
+Author: AdrianaGazato <adrianabnoliveira@gmail.com>
+Date:   Thu Mar 17 16:30:59 2022 -0300
+
+    Redes Sociais
+
+[33mcommit 776840a6331e338250e6127edbd91cb63d444461[m[33m ([m[1;31morigin/git-4[m[33m, [m[1;32mgit-4[m[33m)[m
+Author: AdrianaGazato <adrianabnoliveira@gmail.com>
+Date:   Thu Mar 17 16:25:32 2022 -0300
+
+    Comidas preferidas
+
+[33mcommit a3ef23072f7a489550aef39a0a9903906c039c58[m[33m ([m[1;31morigin/git-3[m[33m, [m[1;32mgit-3[m[33m)[m
+Author: AdrianaGazato <adrianabnoliveira@gmail.com>
+Date:   Thu Mar 17 16:08:56 2022 -0300
+
+    Filmes Favoritos
+
+[33mcommit b3c7fd3fa01c878c70ba737f8b9f51b202bb0b54[m
+Author: AdrianaGazato <adrianabnoliveira@gmail.com>
+Date:   Thu Mar 17 15:56:00 2022 -0300
+
+    mensagem-descrevendo-a-mudança-feita
+
+[33mcommit 4767873afba01aaf3729165fc0d968b80e553f83[m[33m ([m[1;31morigin/git-1[m[33m, [m[1;31morigin/git--1[m[33m, [m[1;32mgit-1[m[33m, [m[1;32mgit--1[m[33m)[m
+Author: AdrianaGazato <adrianabnoliveira@gmail.com>
+Date:   Thu Mar 17 15:27:58 2022 -0300
+
+    minha-bio.txt
+
+[33mcommit b9642d0495c05ae8ba23999fdbe95a2ecbf88466[m
+Author: João Vinicius Alves <jvp.alves@hotmail.com>
+Date:   Tue Mar 15 11:09:25 2022 -0300
+
+    Initial commit
