@@ -11,29 +11,6 @@ const MainContainer = styled.div`
 `
 
 class App extends React.Component {
-
-  render() {
-    return (
-      <MainContainer>
-        <Post
-          nomeUsuario={'paulinha'}
-          fotoUsuario={'https://picsum.photos/40/30'}
-          fotoPost={'https://picsum.photos/200/150'}
-        />
-        <Post
-          nomeUsuario={'drica'}
-          fotoUsuario={'https://picsum.photos/50/50'}
-          fotoPost={'https://picsum.photos/200/140'}
-        />
-         <Post
-          nomeUsuario={'deinha'}
-          fotoUsuario={'https://picsum.photos/30/50'}
-          fotoPost={'https://picsum.photos/100/150'}
-        />
-      </MainContainer>
-    );
-  }
-}
   state = {
     nomeEntrada: "",
     nomeEntrada2: "",
@@ -146,6 +123,5 @@ onSubmitForm = (event) => {
                )
               }
             }
-
 
 export default App;
