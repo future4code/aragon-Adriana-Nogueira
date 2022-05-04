@@ -1,86 +1,48 @@
 import React from "react";
-import axios from "axios";
 
-export default class App extends React.Component {
+import PaginaDeEntrada from "./components/PaginaDeEntrada";
+import TelaNovoUsuario from "./components/TelaNovoUsuario";
+
+ 
+
+export default class App extends React.Component{
   state = {
-    playlists: [],
-    inputName: "",
-    inputEmail:""
-  };
-
-  onChangeInput = (event) => {
-    this.setState({ inputName: event.target.value });
-    
-  };
-onChangeInputNovo = (event) => {
-  this.setState({inputEmail:event.target.value})
-}
-  componentDidMount() {
-    this.getPlaylists();
+    paginaAtual: "cadastro"
   }
 
-  getPlaylists = () => {
-    axios
-      .get(
-       "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
-        {
-          headers: {
-            Authorization: "adriana-nogueira-aragon"
-          }
-        }
-      )
-      .then((response) => {
-        this.setState({ playlists: response.data.result.name });
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  };
+  escolhaPagina = () => {
+    switch (this.state.paginaAtual){
+      case "cadastro":
+      return <PaginaDeEntrada irParaLista={this.irParaLista}/>
+      case "lista":
+        return <TelaNovoUsuario irParaCadastro={this.irParaCadastro}/>
+      default:
+        return <div> Erro" Pagina não encontrada :(</div>
+    }
+  }
 
-  createPlaylist = () => {
-    const body = {
-      name: this.state.inputName
-    };
+  irParaCadastro = () => {
+    this.setState({paginaAtual: "cadastro"})
+  }
 
-    axios
-      .post(
-        "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
-        body,
-        {
-          headers: {
-            Authorization: "adriana-nogueira-aragon"
-          }
-        }
-      )
-      .then((response) => {
-        this.getPlaylists();
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  };
+  irParaLista = () => {
+    this.setState({paginaAtual: "lista"})
+  }
 
-  render() {
-    return (
-      <main>
-        
 
-        <section>
-          <label>
-            Lista
-            <input value={this.state.inputName} onChange={this.onChangeInput} />
-            <input value={this.state.inputEmail} onChange={this.onChangeInput} />
-          </label>
+  render(){
+    return(
+      <div>
+    {this.escolhaPagina()}
+   
+      </div>
 
-          <button onClick={this.createPlaylist}>Adicionar</button>
-        </section>
-
-        <section>
-          {this.state.playlists.map((playlist) => {
-            return <p key={playlist.id}>{playlist.name}</p>;
-          })}
-        </section>
-      </main>
-    );
+    )
   }
 }
+
+
+
+
+
+
