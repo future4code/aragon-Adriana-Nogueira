@@ -9,7 +9,10 @@ margin: 0 auto;
 width: 30%;
 display: flex;
 justify-content: space-between;
-border: 10px
+border: 10px;
+font-size: large;
+
+
 `
 
 const RegistroButton = styled.button`
@@ -62,13 +65,13 @@ export default class PaginaDeEntrada extends React.Component {
         this.setState({ email: event.target.value })
     }
 
-    fazerCadastro = () => {
+    fazerCadastro =  async() => {
         const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users`
         const body = {
             name: this.state.nome,
             email: this.state.email
         }
-        axios.post(url, body, {
+        /* axios.post(url, body, {
             headers: {
                 Authorization: "adriana-nogueira-aragon"
             }
@@ -81,9 +84,23 @@ export default class PaginaDeEntrada extends React.Component {
                 alert(err.response.data.message)
             })
 
-    }
+    } */
 
+    try {
+                const res =  await axios.get(url,body, {
+                    headers:{
+                        Authorization: "adriana-nogueira-aragon"
+                    } 
+                })
+                this.setState({nome: res.data})
+                this.setState({email: res.data})
 
+            }
+            catch (err){
+                alert("Ocorreu um problema tente novamente")
+
+            }
+        } 
 
     render() {
         return (

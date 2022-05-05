@@ -2,36 +2,31 @@ import React from "react";
 import axios from "axios";
 import styled from "styled-components";
 
+const UserList = styled.ul`
+align-items: center`;
+
 const BotaoDelete = styled.button`
-margin: 0 auto;
-  background-color: hsl(236, 32%, 26%);
-  color: white;
   border: none;
-  z-index: 1;
-  position: relative;
-  font-size: inherit;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  padding: 0.5em 1em;
-  outline: none;
-  border: none;
-  display: flex;
-`
+  cursor: pointer;
+  background: #aaaaaa;
+  color: #ffffff;
+  display: inline-block;
+  margin: 0 -2px;
+  padding: 5px 10px;
+  border: 1px solid #666666;
+`;
+
 const CardUsuario = styled.div`
  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  border-radius: 10px;
-  width: 30%;
-  margin: 10px auto;
-  padding: 10px;
+  min-width: 60px;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-
-  div {
-    margin-bottom: 20px;
-  }
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+  font-size: 20px;
+  font-style:italic
 `;
+
 const RegisterButton = styled.button`
   margin: 0 auto;
   background-color: hsl(236, 32%, 26%);
@@ -138,13 +133,13 @@ export default class TelaNovoUsuario extends React.Component {
         })
         return (
             
-            <div>
+            <UserList>
                 <RegisterButton onClick={this.props.irParaCadastro}>Ira para Cadastro  </RegisterButton>
                 <TituloCentralizado>
                 <h2> TelaNovoUsuario</h2>
                 </TituloCentralizado>
                 {listaUsuarios}
-            </div>
+            </UserList>
           
         )
     }
