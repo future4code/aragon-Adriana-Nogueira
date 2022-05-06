@@ -1,35 +1,36 @@
-import React from "react";
-import DetalhesDaPagina from "./DetalhesDaPagina/DetalhesDaPagina";
-import ListaDaPagina from "./ListaDaPagina/ListaDaPagina";
+import React from "react"
+import TelaCadastro from "./components/TelaCadastro"
+import TelaListaUsuarios from "./components/TelaListaUsuarios"
 
-
-export default class App extends React.Component{
+export default class App extends React.Component {
   state = {
-    currentScreen:"details"
+    telaAtual: "cadastro"
   }
-  selectPage =() =>{
-    switch(this.state.currentScreen){
-      case 'list':
-        return <ListaDaPagina/>
-        case "details":
-          return <DetalhesDaPagina/>
-          default:
-            return <ListaDaPagina/>
-      }
-    }
-  
 
-    render (){
-      return( 
-        <div> 
-          {this.selectPage()}
-        </div>
-        
-      )
+  escolheTela = () => {
+    switch (this.state.telaAtual){
+      case "cadastro":
+        return <TelaCadastro irParaLista={this.irParaLista}/>
+      case "lista":
+        return <TelaListaUsuarios irParaCadastro={this.irParaCadastro}/>
+      default:
+        return <div>Erro! Página não encontrada :(</div>
     }
   }
 
+  irParaCadastro = () => {
+    this.setState({telaAtual: "cadastro"})
+  }
 
+  irParaLista = () => {
+    this.setState({telaAtual: "lista"})
+  }
 
-
-
+  render(){
+    return (
+      <div>
+        {this.escolheTela()}
+      </div>
+    )
+  }
+}
