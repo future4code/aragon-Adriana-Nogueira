@@ -2,28 +2,33 @@ import React from "react"
 import TelaCadastro from "./components/TelaCadastro"
 import TelaListaUsuarios from "./components/TelaListaUsuarios"
 
-export default class App extends React.Component {
+ class App extends React.Component {
   state = {
-    telaAtual: "cadastro"
+    telaAtual: "cadastro",
+    musicasEscolhidas:""
   }
+
+  vaParaTela = (url) => {
+    this.setState({telaAtual:"detalhes",musicasEscolhidas:url})
+  }
+
+  voltarParaCadastro = () => 
+{
+  this.setState({telaAtual: "primeiraTela"})
+}
+vaParaLista = () => {
+  this.setState({telaAtual: "lista"})
+}
 
   escolheTela = () => {
     switch (this.state.telaAtual){
       case "cadastro":
-        return <TelaCadastro irParaLista={this.irParaLista}/>
+        return <TelaCadastro vaParaLista={this.vaParaLista}/>
       case "lista":
-        return <TelaListaUsuarios irParaCadastro={this.irParaCadastro}/>
+        return <TelaListaUsuarios voltarParaCadastro={this.voltarParaCadastro}/>
       default:
-        return <div>Erro! Página não encontrada :(</div>
+        return <TelaCadastro url = {this.state.musicasEscolhidas}/>
     }
-  }
-
-  irParaCadastro = () => {
-    this.setState({telaAtual: "cadastro"})
-  }
-
-  irParaLista = () => {
-    this.setState({telaAtual: "lista"})
   }
 
   render(){
@@ -34,3 +39,4 @@ export default class App extends React.Component {
     )
   }
 }
+export default App 
