@@ -10,12 +10,12 @@ import PaginaMatches from "./PaginaMatches";
 // condicional das paginas PerfilUsuario e os MatchesUsuarios onde ira ser a sua exibição
 
 function PaginaHeader (){
-const [page, setPage] = useState('profile')
+const [page, setPage] = useState('profiles')
 // page onde armazena o valor da pagina e setPage atualiza  o estado
 
 const renderPaginaAtual = () =>{
     switch(page) {
-        case "profile":
+        case "profiles":
             return<PerfilUsuario/>
             case "matches":
                 return <PaginaMatches/>
@@ -26,7 +26,7 @@ const renderPaginaAtual = () =>{
 }
 
 const vaParaPerfil = () => {
-    setPage("profile")
+    setPage("profiles")
 }
 const vaParaMatches = ( ) => {
     setPage("matches")

@@ -32,10 +32,10 @@ function Header(props) {
         <header>
             <h1>ASTROMACH</h1>
 
-            {props.page === "profile" ?
+                  {props.page === "profiles" ?
                 <Botao onClick={props.vaParaMatches}>Matches</Botao> :
                 <Botao onClick={props.vaParaPerfil}>Ver Perfil</Botao>
-            }
+    }
         </header>
     );
 }

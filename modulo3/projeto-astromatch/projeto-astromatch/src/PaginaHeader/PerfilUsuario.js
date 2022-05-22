@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { API_CLIENT,BASE_URL } from '../urls/urls';
-import {useState, useEffect} from "react"
+import { useEffect,useState } from 'react';
 import styled from "styled-components"
 
 const EstiloCard = styled.div`
@@ -45,8 +45,9 @@ function PerfilUsuario () {
  const [profile, setPerfil] = useState(undefined)
 
  useEffect(() => {
-     getPerfil()
- },[])
+    getPerfil();
+}, []);
+console.log(PerfilUsuario)
 
 const getPerfil = () => {
     const url = `${BASE_URL}/${API_CLIENT} /person`
@@ -55,7 +56,7 @@ const getPerfil = () => {
         setPerfil(res.data.profile)
     })
     .catch((err) => {
-        console.log(err.message)
+        console.log(err.response)
     })
 }
 
@@ -67,8 +68,11 @@ const escolherPerfil = (profileId, choice) =>{
         choice: choice
     }
     axios.post(url,body)
-    .then(() =>{
-        escolherPerfil()
+    .then((res) =>{
+        if (body.choice && res.data.isMatch){
+            alert("Deu Match!!!")
+        }
+        getPerfil()
 
     })
     .catch((err) => {
@@ -89,33 +93,34 @@ const resetarPerfil = () => {
 }
 
 
-const perfilCartao = profile && (
+const perfilCartao = profile ? (
 
-    <div>
+    <figure>
         < Card src={profile.photo} alt={profile["photo_alt"]}height={"270"}/>
         
-        <Container>
+     
         <p>{profile.name}, {profile.age}</p>
        
     
         <p>{profile.bio}</p>
-        </Container>
+       
         <Botao onClick={() => escolherPerfil(profile.id, true)}>Like</Botao>
         <Botao onClick={() => escolherPerfil(profile.id, false)}>Dislike</Botao>
-<p>
-        <Botao onClick={() => getPerfil()}>Proximo Perfil</Botao>
-        </p>
-        </div>
 
-   
+        </figure>
+):(
+   <div>
+       <h4> Matches acabaram" Clique em Resetar Perfil para reiniciar!</h4>
+       <Botao onClick={() => resetarPerfil()}>Reseta Perfil</Botao>
+   </div>
+
 )
-
 
         return (
             <EstiloCard>
              <h2>Perfil</h2>   
              {perfilCartao}
-             <Botao onClick={() => resetarPerfil()}>Reseta Perfil</Botao>
+          
             </EstiloCard>
         );
     }
