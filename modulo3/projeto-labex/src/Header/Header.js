@@ -27,15 +27,15 @@ font-family: Arial, Helvetica, sans-serif;
 function Header() {
     const navigate = useNavigate()
 
-    const [inputAcesso, setInputAcesso] = useState("")
-    const [inputPassword, setInputPassword] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
 
     const handleInputValor = (event) => {
         switch (event.target.name){
             case "email":
-                return setInputAcesso(event.target.value)
+                return setEmail(event.target.value)
             case "password":
-                return setInputPassword(event.target.value)
+                return setPassword(event.target.value)
                 default:
                     return  
         }
@@ -44,7 +44,7 @@ function Header() {
     const login = (event) => {
         event.preventDefault();
 
-        requestLogin(inputAcesso, inputPassword, navigate)
+        requestLogin(email, password, navigate)
     }
     const logout  = () => {
         localStorage.removeItem("token")
@@ -58,9 +58,9 @@ function Header() {
      ):(
          <form onSubmit={login}>
              
-                <label htmlFor="email">Email:</label>
+                <label htmlFor={"email"}>Email:</label>
                 <input 
-                name={"name"} 
+                name={"email"} 
                 id={"email"}
                 value={email}
                 onChange={handleInputValor} />
@@ -72,7 +72,7 @@ function Header() {
                 value={password}
                 onChange={handleInputValor}/>
                 <br/>
-                <Botao>Login</Botao>
+                <Botao type={'submit'}>Login</Botao>
            
          </form>
      )
