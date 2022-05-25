@@ -1,6 +1,6 @@
-export function goToAdminPage(navigate){
+export const goToAdminPage = (navigate) =>{
     navigate("/admin")
 }
-export function goToHomePage(navigate){
+export const goToHomePage = (navigate)=>{
     navigate("/")
 }
