@@ -72,7 +72,7 @@ function AdminPage() {
                             title={"O nome da viagem deve ter no mínimo 5 caracteres"}
                             required />
                         <br />
-                        <label htmlFor="planet">Planet:</label>
+                        <label htmlFor={"planet"}>Planet:</label>
                         <select
                             name={"planet"}
                             id={"planet"}

@@ -10,13 +10,16 @@ function TripDetails(){
 
     const navigate = useNavigate()
     const params = useParams()
-    const [detailsData] = useRequestData(`trip/${params.tripId}`, {});
+    const [detailsData, getTripsDetail] = useRequestData(`trip/${params.tripId}`, {});
 
     useEffect(() => {
         if (!localStorage.getItem("token")) {
             goToHomePage(navigate)
         }
         },[])
+        const decideCandidate = (candidateId, decision) => {
+            decideCandidate(params.tripId, candidateId, decision, getTripsDetail)
+        }
     const candidatesList = detailsData.trip && detailsData.trip.candidates.map((candidate) => {
 
 
