@@ -6,22 +6,59 @@ import { useState } from "react";
 
 const Container = styled.div`
 padding: 10px;
-border-bottom: 2px solid black;
+background: linear-gradient(70deg, blue, white);
+color: white;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 2px;
+`
+const Container1 = styled.div `
+background-color: lightsteelblue;
+color: white;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 2px;
+padding: 10px;
+border-radius: 2px solid black
+;
+
 `
 const Botao = styled.button`
-pointer-events: auto;
 cursor: pointer;
-background: #e7e7e7;
-border: none;
-padding: 0.5rem 2rem;
-margin: 0;
-position: relative;
-display: inline-block;
-font-family: Arial, Helvetica, sans-serif;
+background: black;
+color:white;
+box-shadow: #094c66 4px 4px 0px;
+border-radius: 8px;
+transition: transform 200mx, box-shadow;
+margin:0.5rem;
+
+button:active{
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #094c66 0px 0px 0px;
+}
 
 `
+const Botao1 = styled.button`
+height:2rem;
+width: 5rem;
+justify-items: center;
+cursor: pointer;
+background: black;
+color:white;
+box-shadow: #094c66 4px 4px 0px;
+border-radius: 8px;
+transition: transform 200mx, box-shadow;
+margin:0.5rem;
+
+button:active{
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #094c66 0px 0px 0px;
+}
 
 
+`
 
 
 function Header() {
@@ -54,8 +91,9 @@ function Header() {
      const renderPage = 
      localStorage.getItem('token') ?
      (
-         <Botao onClick={logout}>Logout</Botao>
+         <Botao1 onClick={logout}>Logout</Botao1>
      ):(
+         <Container1>
          <form onSubmit={login}>
              
                 <label htmlFor={"email"}>Email:</label>
@@ -75,6 +113,7 @@ function Header() {
                 <Botao type={'submit'}>Login</Botao>
            
          </form>
+         </Container1>
      )
 
    

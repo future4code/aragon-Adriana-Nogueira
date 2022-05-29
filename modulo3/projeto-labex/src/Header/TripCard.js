@@ -1,5 +1,23 @@
 import { useNavigate } from "react-router-dom"
 import {goToTripDetailsPage} from "../Rotas/coordenadas"
+import styled from "styled-components"
+
+const Botao = styled.button`
+cursor: pointer;
+background: black;
+color:white;
+box-shadow: #094c66 4px 4px 0px;
+border-radius: 8px;
+transition: transform 200mx, box-shadow;
+margin:0.5rem;
+
+button:active{
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #094c66 0px 0px 0px;
+}
+`
+
+
 
 function TripCard (props){
 
@@ -19,8 +37,8 @@ return (
 
 { token && (
 <div>
-<button onClick={() => goToTripDetailsPage(navigate, id)}>Exibir detalhes</button>
-<button  onClick={() => props.removeTrip(id)}> Excluir viagem</button>
+<Botao onClick={() => goToTripDetailsPage(navigate, id)}>Exibir detalhes</Botao>
+<Botao  onClick={() => props.removeTrip(id)}> Excluir viagem</Botao>
 </div>
 )}
 

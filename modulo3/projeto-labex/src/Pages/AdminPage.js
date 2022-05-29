@@ -12,6 +12,20 @@ import { createTrip } from "../servicos/Request"
 import { planets } from "../urls/planets";
 import actualDate from "../utils/actualDate";
 
+const Botao = styled.button`
+cursor: pointer;
+background: black;
+color:white;
+box-shadow: #094c66 4px 4px 0px;
+border-radius: 8px;
+transition: transform 200mx, box-shadow;
+margin:0.5rem;
+
+button:active{
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #094c66 0px 0px 0px;
+}
+`
 
 const Container = styled.section`
 padding: 10px;
@@ -104,7 +118,7 @@ function AdminPage() {
                             pattern={"^.{20,}$"}
                             title={"O nome deve conter no minimo  20 caracteres"}
                             required />
-                        <label htmlFor={"duration"}>Duração:</label>
+                        <label htmlFor={"duration"}>Duração &#4; em dias&#41;:</label>
                         <input
 
                         id={"duration"}
@@ -114,7 +128,7 @@ function AdminPage() {
                         onChange={onChange}
                         min={30}
                          required/>
-                    <button type={"submit"}>Criar</button>
+                    <Botao type={"submit"}>Criar</Botao>
 
                     </form>
                 </Container>
