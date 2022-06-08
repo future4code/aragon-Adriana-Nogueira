@@ -1,15 +1,12 @@
+import GlobalState from "./context/GlobalState";
 import Router from "./routes/Router";
 
 
  function App() {
   return (
-    <div>
-      
-       
-        <Router/>
-      
-    
-    </div>
+    <GlobalState>
+              <Router/>
+    </GlobalState>
   );
 }
 export default App

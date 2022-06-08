@@ -4,8 +4,10 @@ import Header from "../componentes/Header";
 import { goToPaginaLogout } from "../routes/coordenadas";
 import { requestLogin } from "../serviços/requests";
 import useForm from "../hooks/useForm";
+import useUnprotectedPage from "../hooks/useUnprotectedPage";
 
 export default function PaginaLoggin() {
+    useUnprotectedPage()
     const navigate= useNavigate()
 const {form, onChange, clear}  = useForm({email:"", password:""})
 
@@ -31,18 +33,21 @@ const login = (e) =>{
                 onChange={onChange}
                />
                 <br/>
-                <label htmlFor={"password"}>Senha:</label>
-                <input id={"password"}
-                name={"password"}
-                value={form.password}
-                onChange={onChange}/>
+                <label htmlFor={"password"}>Senha: </label>
+                    <input
+                        id={"password"}
+                        type={"password"}
+                        name={"password"}
+                        value={form.password}
+                        onChange={onChange}
+                    ></input>
                  <br/>
                 <button type={"submit"} >Entrar</button>
                 </form>
                 </section>
                 <hr/>
                 <section>
-                    <h3>Não tem cadastro? Cliqueno botão seguir para se cadastrar:</h3>
+                    <h3>Não tem cadastro? Clique no botão seguir para se cadastrar:</h3>
                     <button onClick={() => goToPaginaLogout(navigate)}>Ir para cadastro</button>
                 </section>
                 

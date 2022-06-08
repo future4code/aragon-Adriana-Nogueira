@@ -3,9 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { goToLogin } from "../routes/coordenadas";
 import useForm from "../hooks/useForm";
 import { requestLogout } from "../serviços/requests";
+import useUnprotectedPage from "../hooks/useUnprotectedPage";
 
 
 function PaginaLogout() {
+    useUnprotectedPage()
   const navigate = useNavigate()
     const { form, onChange, clear } = useForm({ name: "", email: "", password: "" });
 
@@ -16,7 +18,9 @@ const logout = (e) => {
 
 return (
     <>
-        <Header />
+        <Header 
+        isProtected={false}/>
+
         <main>
             <h1>Cadastro de Novo usuario</h1>
             <form onSubmit={logout}>
@@ -48,7 +52,7 @@ return (
                 <br />
                 <button type={"submit"} >Cadastrar</button>
             </form>
-            <button onClick={() => goToLogin(navigate)}>Ja tenho conta</button>
+            <button onClick={() => goToLogin(navigate)}>Voltar</button>
         </main>
 
     </>

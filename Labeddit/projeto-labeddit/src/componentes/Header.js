@@ -23,7 +23,7 @@ function Header(props){
         <h1>Labbedit</h1>    
         {props.isProtected && (
             <>
-            <h3> Bem-vindo, {localStorage.getItem("useEmail")}!</h3>
+            <h3> Bem-vindo, {localStorage.getItem("useEmail")}</h3>
             <button onClick={logout}>Logout</button>
             </>
         )}
