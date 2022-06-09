@@ -3,10 +3,6 @@ import { goToLogin } from "../routes/coordenadas"
 
 
 
-
-
-
-
 function Header(props){
     const navigate = useNavigate()
   const logout = () => {

@@ -5,12 +5,12 @@ import { goToLogin } from "../routes/coordenadas"
 
 
 export const useProtectedPage = () => {
-    const navigate= useNavigate()
+    const navigate = useNavigate()
 
     useEffect(() => {
-        const token=localStorage.getItem("token")
+        const token = localStorage.getItem("token")
 
-        if(!token) {
+        if (!token) {
             goToLogin(navigate)
         }
     })

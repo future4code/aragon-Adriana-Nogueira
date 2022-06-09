@@ -8,23 +8,25 @@ import PostCard from "../componentes/PostCard"
 import { useContext } from "react"
 
 
-function PaginaFeed() {
-    useProtectedPage()
+function FeedPage() {
+    useProtectedPage();
 
     const { form, onChange, clear } = useForm({ title: "", body: "" });
 
     const { states, getters } = useContext(GlobalStateContext);
-    const { posts } = states
+
+    const { posts } = states;
+
     const { getPosts } = getters;
 
     useEffect(() => {
-        getPosts()
-    },[])
+        getPosts();
+    }, []);
 
     const createPost = (event) => {
-        event.preventDefautl()
+        event.preventDefault();
 
-        requestCreatePost(form, clear)
+        requestCreatePost(form, clear, getPosts);
     }
 
     const showPosts = posts.length && posts.map((post) => {
@@ -39,6 +41,7 @@ function PaginaFeed() {
 
     return (
         <main>
+            
             <Header
                 isProtected={true}
             />
@@ -81,4 +84,4 @@ function PaginaFeed() {
     );
 };
 
-export default PaginaFeed
+export default FeedPage;

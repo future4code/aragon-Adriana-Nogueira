@@ -9,9 +9,7 @@ export const goToPaginaLogout = (navigate) =>{
 export const goToFeed = (navigate) =>{
     navigate("/")
 }
-export const goToPaginaDetalhe = (navigate) =>{
-    navigate("/post/postId")
+export const goToPaginaDetalhe = (navigate,postId) =>{
+    navigate(`/post/${postId}`)
 }
-export const goback = (navigate) =>{
-    navigate(-1)
-}
+

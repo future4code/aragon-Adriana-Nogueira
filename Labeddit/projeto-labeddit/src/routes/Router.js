@@ -16,7 +16,7 @@ return(
         <Route index element={<PaginaFeed/>}/>
         <Route path="/login" element={<PaginaLogin/>}/>
         <Route path="/signup" element={<PaginaLogout/>}/>
-        <Route path="/post/:postId" element={<PaginaDetalhe/>}/>
+        <Route path={"/post/:postId"} element={<PaginaDetalhe />} />
         <Route path="*" element={<ErrorPage/>}/>
 
     </Routes>
