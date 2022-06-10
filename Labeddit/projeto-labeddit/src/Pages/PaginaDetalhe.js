@@ -7,6 +7,7 @@ import GlobalStateContext from "../context/GlobalStateContext";
 import useProtectedPage from "../hooks/useProtectedPage";
 import useForm from "../hooks/useForm";
 import { requestCreateComment } from "../serviços/requests";
+import { goToFeed } from "../routes/coordenadas";
 
 
 function PaginaDetalhes() {
@@ -15,15 +16,15 @@ function PaginaDetalhes() {
     const params = useParams()
     const { form, onChange, clear } = useForm({ body: "" })
     const { states, getters } = useContext(GlobalStateContext)
-    const { post, postComments } = states
+    const { post, postComments, isLoading } = states
     const { getPostComments } = getters
 
     useEffect(() => {
         if (post.id && post.id === params.postId) {
             getPostComments(post.id);
-
         } else {
             alert("Um erro ocorreu! Você será redirecionado para Feed.")
+            goToFeed(navigate);
         }
     }, []);
 
@@ -73,7 +74,7 @@ function PaginaDetalhes() {
             <hr />
             <section>
                 <h2>Lista de comentarios</h2>
-                {showComments}
+                {isLoading ? <p>CARREGANDO...</p>:showComments}
             </section>
         </main>
 

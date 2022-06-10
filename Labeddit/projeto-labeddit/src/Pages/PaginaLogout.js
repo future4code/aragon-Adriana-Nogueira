@@ -36,6 +36,7 @@ return (
                 <br />
                 <label htmlFor={"email"}>Email:</label>
                 <input id={"email"}
+                type={"email"}
                     name={"email"}
                     value={form.email}
                     onChange={onChange}
@@ -44,13 +45,14 @@ return (
                 <label htmlFor={"password"}>Senha:</label>
                 <input id={"password"}
                     name={"password"}
+                    type={"password"}
                     value={form.password}
                     onChange={onChange}
                     pattern={"^.{8,30}$"}
                     title={"O nome deve ter no mínimo 8 e no máximo 30 caracteres"}
                     required />
                 <br />
-                <button type={"submit"} >Cadastrar</button>
+                <button type={"submit"} >Cadastrar usuário</button>
             </form>
             <button onClick={() => goToLogin(navigate)}>Voltar</button>
         </main>
