@@ -8,7 +8,37 @@ import useProtectedPage from "../hooks/useProtectedPage";
 import useForm from "../hooks/useForm";
 import { requestCreateComment } from "../serviços/requests";
 import { goToFeed } from "../routes/coordenadas";
+import styled from "styled-components"
+import GlobalStyle from "../Theme/GlobalStyle";
 
+const Botao = styled.button`
+ background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  padding: 2px;
+  width: 10%;
+  height: 30px;
+  `
+  const Secao = styled.section`
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+   
+  `
+  
+  const Input = styled.input`
+  font-family: Poppins-Regular;
+      font-size: 15px;
+      color: #555555;
+      line-height: 1.2;
+      display: block;
+      width: 99%;
+      height: 45px;
+      background: transparent;
+      padding: 0 5px;
+      
+  
+  `
 
 function PaginaDetalhes() {
     useProtectedPage()
@@ -41,23 +71,23 @@ function PaginaDetalhes() {
         )
     }) : <p>Não há comentarios para este post. Seja a primeira pessoa a comentar!</p>
     return (
-        <main>
+        <GlobalStyle>
             <Header
                 isProtected={true} />
             <hr />
-            <button onClick={() => (navigate(-1))}>Voltar</button>
-            <section>
+            <Botao onClick={() => (navigate(-1))}>Voltar</Botao>
+            <Secao>
                 <h2>Informações do Post</h2>
                 <PostCard
                     key={post.id}
                     post={post}
                     isfeed={false} />
-            </section>
-            <section>
+            </Secao>
+            <Secao>
                 <h1>Escreva seu comentario</h1>
                 <form onSubmit={createdComment}>
                     <label htmlFor={"body"}> Comentário: </label>
-                    <input
+                    <Input
                         id={"body"}
                         type={"text"}
                         name={"body"}
@@ -68,15 +98,15 @@ function PaginaDetalhes() {
                         required
                     />
                     <br />
-                    <button type={"submit"}>Criar Post</button>
+                    <Botao type={"submit"}>Criar Post</Botao>
                 </form>
-            </section>
+            </Secao>
             <hr />
-            <section>
+            <Secao>
                 <h2>Lista de comentarios</h2>
                 {isLoading ? <p>CARREGANDO...</p>:showComments}
-            </section>
-        </main>
+            </Secao>
+        </GlobalStyle>
 
     )
 }

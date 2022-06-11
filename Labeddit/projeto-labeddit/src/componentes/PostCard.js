@@ -5,6 +5,40 @@ import { goToPaginaDetalhe } from '../routes/coordenadas'
 import { format } from 'date-fns'
 import { requestCreatePostVote } from '../serviços/requests'
 import { requestChangePostVote, requestDeletePostVote } from "../serviços/requests"
+import styled from "styled-components"
+const ImgContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin-right: 5px;
+  border-radius: 1px solid black;
+  @media #{$BREAKPOINT-DESK} {
+    height: 360px;
+  }
+  svg {
+    margin-right: 5px;
+  }
+`;
+const Article = styled.article`
+ padding: 2px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+const Botao = styled.button`
+ background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  padding: 2px;
+  width: 20%;
+  height: 50px;
+  `
 
 
 
@@ -29,7 +63,7 @@ function PostCard(props) {
         goToPaginaDetalhe(navigate, id);
     };
 
-    
+
     const chooseVote = (typeVote) => {
         if (typeVote === "up") {
             if (isDownVoted) {
@@ -57,39 +91,56 @@ function PostCard(props) {
         typeVote === "up" ? setIsUpVoted(false) : setIsDownVoted(false);
     };
 
-   
+
     const showVoteButtons = props.isFeed && (
         <>
-          
+
             {userVote && isDownVoted ?
-                <button onClick={() => removeVote("down")}>Remover voto "Não Gostei"</button>
-                : <button onClick={() => chooseVote("down")}>
+                <Botao onClick={() => removeVote("down")}>Remover voto "Não Gostei"</Botao>
+                : <Botao onClick={() => chooseVote("down")}>
                     {isUpVoted ? `Mudar voto para "Não Gostei"` : `Votar em "Não Gostei"`}
-                </button>
+                </Botao>
             }
             <br />
             {userVote && isUpVoted ?
-                <button onClick={() => removeVote("up")}>Remover voto "Gostei"</button>
-                : <button onClick={() => chooseVote("up")}>
+                <Botao onClick={() => removeVote("up")}>Remover voto "Gostei"</Botao>
+                : <Botao onClick={() => chooseVote("up")}>
                     {isDownVoted ? `Mudar voto para "Gostei"` : `Votar em "Gostei"`}
-                </button>
+                </Botao>
             }
         </>
     );
 
     return (
         <article>
-            <h3>{title}</h3>
-            <span><b>Autor: </b>{userId}</span>
-            <p>Criado em {date}</p>
+            <Article>
+                <h3>{title}</h3>
+            </Article>
+            <Article>
+                <span><b>Autor: </b>{userId}</span>
+            </Article>
+            <Article>            <p>Criado em {date}</p>
+            </Article>
 
-                        <img src={"https://picsum.photos/200/300?random=" + id} alt="Imagem aleatória do post" />
-            <p><b>Descrição: </b>{body}</p>
+            <ImgContainer>
 
-            <p>Votos: {voteSum ? voteSum : 0}</p>
+                <img src={"https://picsum.photos/200/300?random=" + id} alt="Imagem aleatória do post" />
+            </ImgContainer>
+            <Article>
+                <p><b>Descrição: </b>{body}</p>
+            </Article>
+            <Article>
+                <p>Votos: {voteSum ? voteSum : 0}</p>
+            </Article>
+<Article>
             {showVoteButtons}
+            </Article>
+            <Article>
             <p>Comentários: {commentCount ? commentCount : 0}</p>
-            {props.isFeed && <button onClick={goToComments}>Ver comentários</button>}
+            </Article>
+            <Article>
+            {props.isFeed && <Botao onClick={goToComments}>Ver comentários</Botao>}
+            </Article>
             <hr />
         </article>
     );

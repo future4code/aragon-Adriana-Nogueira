@@ -4,7 +4,33 @@ import { goToLogin } from "../routes/coordenadas";
 import useForm from "../hooks/useForm";
 import { requestLogout } from "../serviços/requests";
 import useUnprotectedPage from "../hooks/useUnprotectedPage";
+import styled from "styled-components"
+import GlobalStyle from "../Theme/GlobalStyle";
+const Body = styled.body `
+font-family: Arial, Helvetica, sans-serif`
 
+
+const Botao = styled.button`
+ background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  padding: 2px;
+  width: 10%;
+  height: 30px;
+  `
+
+const Input = styled.input`
+font-family: Poppins-Regular;
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    padding: 0 5px;
+
+`
 
 function PaginaLogout() {
     useUnprotectedPage()
@@ -17,7 +43,8 @@ const logout = (e) => {
 }
 
 return (
-    <>
+    <Body>
+    <GlobalStyle>
         <Header 
         isProtected={false}/>
 
@@ -25,7 +52,7 @@ return (
             <h1>Cadastro de Novo usuario</h1>
             <form onSubmit={logout}>
                 <label htmlFor={"name"}>Nome:</label>
-                <input id={"name"}
+                <Input id={"name"}
                     name={"name"}
                     value={form.name}
                     onChange={onChange}
@@ -35,7 +62,7 @@ return (
                 />
                 <br />
                 <label htmlFor={"email"}>Email:</label>
-                <input id={"email"}
+                <Input id={"email"}
                 type={"email"}
                     name={"email"}
                     value={form.email}
@@ -43,7 +70,7 @@ return (
                     required />
                 <br />
                 <label htmlFor={"password"}>Senha:</label>
-                <input id={"password"}
+                <Input id={"password"}
                     name={"password"}
                     type={"password"}
                     value={form.password}
@@ -52,13 +79,13 @@ return (
                     title={"O nome deve ter no mínimo 8 e no máximo 30 caracteres"}
                     required />
                 <br />
-                <button type={"submit"} >Cadastrar usuário</button>
+                <Botao type={"submit"} >Cadastrar usuário</Botao>
             </form>
-            <button onClick={() => goToLogin(navigate)}>Voltar</button>
+            <Botao onClick={() => goToLogin(navigate)}>Voltar</Botao>
         </main>
 
-    </>
-
+    </GlobalStyle>
+    </Body>
 )
 }
 export default PaginaLogout

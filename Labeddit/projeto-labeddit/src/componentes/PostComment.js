@@ -2,6 +2,16 @@ import {format} from "date-fns"
 import { useContext, useEffect, useState } from "react";
 import GlobalStateContext from "../context/GlobalStateContext";
 import {requestChangeCommentVote, requestCreateCommentVote, requestDeleteCommentVote} from "../serviços/requests"
+import styled from "styled-components"
+const Botao = styled.button`
+ background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  padding: 2px;
+  width: 20%;
+  height: 50px;
+  `
+
 
 function PostComment(props) {
     const { getters } = useContext(GlobalStateContext);
@@ -49,17 +59,17 @@ function PostComment(props) {
     const showVoteButtons = (
         <>
             {userVote && isDownVoted ?
-                <button onClick={() => removeVote("down")}>Remover voto "Não Gostei"</button>
-                : <button onClick={() => chooseVote("down")}>
+                <Botao onClick={() => removeVote("down")}>Remover voto "Não Gostei"</Botao>
+                : <Botao onClick={() => chooseVote("down")}>
                     {isUpVoted ? `Mudar voto para "Não Gostei"` : `Votar em "Não Gostei"`}
-                </button>
+                </Botao>
             }
             <br />
             {userVote && isUpVoted ?
-                <button onClick={() => removeVote("up")}>Remover voto "Gostei"</button>
-                : <button onClick={() => chooseVote("up")}>
+                <Botao onClick={() => removeVote("up")}>Remover voto "Gostei"</Botao>
+                : <Botao onClick={() => chooseVote("up")}>
                     {isDownVoted ? `Mudar voto para "Gostei"` : `Votar em "Gostei"`}
-                </button>
+                </Botao>
             }
         </>
     );
