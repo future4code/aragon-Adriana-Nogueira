@@ -1,11 +1,5 @@
 // EXEMPLOS DE IMPLEMENTAÇÃO ---------------------------------------------------------------
 
-// EXERCÍCIO 0A
-function soma(num1, num2) {
-
-  return num1 + num2
-}
- 
 // EXERCÍCIO 0B
 function imprimeMensagem() {
   // implemente sua lógica aqui
@@ -115,35 +109,3 @@ return array.pop()
 }
 const NovaArray2 = [1,2,3,4,5]
 console.log(retornaUltimoElemento(NovaArray2))
-
-// EXERCÍCIO 11
-function trocaPrimeiroEUltimo(array) {
-  // implemente sua lógica aqui
-  return array.push(array.splice(0,1)[0])
-
-}
-const novaArray3 = [1,2,3,4,5]
-
-// EXERCÍCIO 12
-function checaIgualdadeDesconsiderandoCase(string1, string2) {
-  // implemente sua lógica aqui
-
-}
-
-// EXERCÍCIO 13
-function checaRenovacaoRG() {
-  // implemente sua lógica aqui
-
-}
-
-// EXERCÍCIO 14
-function checaAnoBissexto(ano) {
-  // implemente sua lógica aqui
-
-}
-
-// EXERCÍCIO 15
-function checaValidadeInscricaoLabenu() {
-  // implemente sua lógica aqui
-
-}
