@@ -16,5 +16,6 @@ const segundaLista= [
 	}
 ]
   
-  var obj3 = Object.assign(primeiraLista, ...segundaLista);
+  const obj3 =Object.assign(primeiraLista, ...segundaLista);
   console.log(obj3);
+  
