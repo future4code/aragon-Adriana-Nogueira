@@ -55,12 +55,13 @@
 
     //Parte 2
 
-    function buscarPostsPorAutor(post:string, autorInformado:string) {
+    function buscarPostsPorAutor(post:Post[], autorInformado:string) {
         return post.filter(
-          (post:Post) => {
+          (post) => {
             return post.autor === autorInformado
           }
         )
       }
 
   console.log(buscarPostsPorAutor(post,"Lord Voldemort"))
+  
