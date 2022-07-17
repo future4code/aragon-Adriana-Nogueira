@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
 import connection from "./database/connection";
-import {Pessoas} from "./types"
+import {Pessoa} from "./types"
 
 
 const app = express();
@@ -61,13 +61,13 @@ app.post("/pessoas", async (req: Request, res: Response) => {
     }
 
     const [pessoas] = await connection.raw(`
-    SELECT * FROM Lista_Usuario
-    WHERE email = "${email}";
+    SELECT * FROM Pessoas
+    WHERE LOWER(email) = "${email.toLowerCase()}";
     `)
 
     const procurarPessoa = pessoas[0]
 
-    if (procurarPessoa) {
+    if (procurarPessoa !== undefined) {
       errorCode = 409
       throw new Error("Erro: email já cadastrado.");
     }
@@ -77,14 +77,14 @@ app.post("/pessoas", async (req: Request, res: Response) => {
       throw new Error("Erro: nome do(a) Usuario(a) deve conter pelo menos 4 caracteres.");
     }
 
-    const cadastroPessoas: Pessoas = {
-      id: Number(Date.now()),
+    const cadastroPessoas: Pessoa = {
+      id: Date.now(),
       nome: nome,
       email: email
     }
 
     await connection.raw(`
-    INSERT INTO Lista_Usuario(id, nome, email)
+    INSERT INTO Pessoas(id, nome, email)
     VALUES ("${cadastroPessoas.id}", "${cadastroPessoas.nome}", "${cadastroPessoas.email}");
     `)
 

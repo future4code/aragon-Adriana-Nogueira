@@ -33,7 +33,6 @@ export const users: User[] = [
         email: "amandaa@lbn.com"
     }
 ];
-
 // Lista de Tarefas do projeto ToDoList
 export const tasks: Task[] = [
     {
@@ -86,6 +85,7 @@ export const tasks: Task[] = [
     }
 ];
 
+
 // Lista de usuários responsáveis por tarefas do sistema ToDoList.
 export const responsibles = [
     {
@@ -94,10 +94,6 @@ export const responsibles = [
     },
     {
         userId: "1",
-        taskId: "5"
-    },
-    {
-        userId: "2",
         taskId: "5"
     },
     {

@@ -1,10 +1,13 @@
 import express from "express";
 import cors from "cors";
 import { ping } from "./endpoints/ping";
-import connection from "./database/connection";
 import { getUsers } from "./endpoints/getUsers";
 import { getTasks } from "./endpoints/getTasks";
-import { userTasks} from "./endpoints/userTasks"
+import { userTasks} from "./endpoints/userTasks";
+import {adicionaUsuario} from "./endpoints/adicionar"
+import { alteraUsuario } from "./endpoints/altera";
+import { alteraTarefa } from "./endpoints/alteraTarefa";
+import { deletaTarefa } from "./endpoints/deleta";
 
 
 const app = express();
@@ -26,3 +29,16 @@ app.get("/users", getUsers)
 app.get("/tasks", getTasks)
 //
 app.get("/tasks/:taskId/users", userTasks)
+
+//
+
+app.post("/tasks/:taskId/users", adicionaUsuario)
+//
+app.put("/users/:userId", alteraUsuario) 
+
+//
+app.put("/tasks/:taskId", alteraTarefa) 
+
+//
+
+app.delete("/tasks/:taskId", deletaTarefa)
