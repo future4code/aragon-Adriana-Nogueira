@@ -1,4 +1,4 @@
-export type Pessoas ={
+export type Pessoa ={
     id: number,
     nome: string,
     email:string
