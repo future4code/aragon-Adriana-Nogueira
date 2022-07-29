@@ -1,33 +1,24 @@
-export interface TClassroomDB {
+export interface IClassroomDB {
     id: string,
     name: string,
-    module: MODULE
+    module: string
 }
 
 export enum MODULE {
-    ZERO = "0",
-    UM = "1",
-    DOIS = "2",
-    TRÊS = "3",
-    QUATRO = "4",
-    CINCO = "5",
-    SEIS = "6"
+    NOT_INIT = "0",
+    MODULO_1 = "1",
+    MODULO_2 = "2",
+    MODULO_3 = "3",
+    MODULO_4 = "4",
+    MODULO_5 = "5",
+    MODULO_6 = "6",
 }
-
 export class Classroom {
-
-
     constructor(
         private id: string,
         private name: string,
-        private student: string[],
-        private module: number
-    ) {
-        this.id = id
-        this.name = name
-        this.student = student
-        this.module = module
-    }
+        private module: MODULE
+    ) { }
 
     public getId() {
         return this.id
@@ -37,11 +28,10 @@ export class Classroom {
         return this.name
     }
 
+
+
     public getModule() {
         return this.module
-    }
-    public getStudent() {
-        return this.student
     }
 
     public setId(newId: string) {
@@ -51,11 +41,10 @@ export class Classroom {
     public setName(newName: string) {
         this.name = newName
     }
-    public setStudent(newStudent: string[]) {
-        this.student = newStudent
-    }
 
-    public setModule(newmodule: number) {
-        this.module = newmodule
+
+
+    public setModule(newModule: MODULE) {
+        this.module = newModule
     }
 }

@@ -14,5 +14,5 @@ export abstract class BaseDatabase {
          database: process.env.DB_DATABASE,
          multipleStatements: true
       },
-   });
+   })
 }

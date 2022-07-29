@@ -1,9 +1,19 @@
-export type TStudent = {
+export interface IStudentDB {
     id: string,
     name: string,
     email: string,
-    birthdate: Date
-    classroom_id: null | string
+    birthdate: Date,
+    classroom_id: string | null
+}
+
+export interface IHobbiesDB {
+    id: string,
+    title: string
+}
+
+export interface IStudentsHobbiesDB {
+    student_id: string,
+    hobby_id: string
 }
 
 export class Student {
@@ -12,42 +22,31 @@ export class Student {
         private name: string,
         private email: string,
         private birthdate: Date,
-        private classroomId: string,
-        private hobbies: string[]
-
-
-    ) {
-        this.id = id
-        this.name = name
-        this.email = email
-        this.birthdate = birthdate
-        this.classroomId = classroomId
-        this.hobbies = hobbies
-    }
+        private classroom_id: string | null,
+       
+    ) {}
 
     public getId() {
-        return this.id
+        return this.classroom_id
     }
 
     public getName() {
         return this.name
     }
 
-    public getbirthdate() {
-        return this.birthdate
-    }
-
     public getEmail() {
         return this.email
     }
-    public getClassroomid() {
-        return this.classroomId
-    }
-    public getHobbies() {
-        return this.hobbies
+
+    public getBirthdate() {
+        return this.birthdate
     }
 
+    public getClassroomId() {
+        return this.classroom_id
+    }
 
+    
 
     public setId(newId: string) {
         this.id = newId
@@ -56,14 +55,14 @@ export class Student {
     public setName(newName: string) {
         this.name = newName
     }
-    public setEmail(newEmail: string) {
-        this.email = newEmail
-    }
 
-    public setBbirthdate(newBirthdate: Date) {
+    public setBirthdate(newBirthdate: Date) {
         this.birthdate = newBirthdate
     }
-    public setClassroomId(newClassroomId: string) {
-        this.classroomId = newClassroomId
+
+    public setClassroomId(newClassroomId: string | null) {
+        this.classroom_id = newClassroomId
     }
+
+   
 }
