@@ -42,3 +42,12 @@ Content-Type: application/json
     "classroom_id": "103"
 }
 
+### Exercicio editar classe do estudante
+PUT http://localhost:3003/students/208
+Content-Type: application/json
+
+{
+    
+    "classroom_id": "103"
+}
+
