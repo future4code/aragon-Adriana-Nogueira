@@ -1,14 +1,15 @@
 ### Endpoint de teste
 GET http://localhost:3003/ping
 
+
 ### Signup
 POST http://localhost:3003/signup
 Content-Type: application/json
 
 {
-    "nickname": "FulanodeTal",
-    "email": "fulano@email.com",
-    "password": "fupass"
+    "nickname": "yuzodev",
+    "email": "yuzo@email.com",
+    "password": "yuzo123"
 }
 
 ### Login
@@ -16,26 +17,23 @@ POST http://localhost:3003/login
 Content-Type: application/json
 
 {
-    "email": "astrodev@gmail.com",
-    "password": "bananinha"
+    "email": "yuzo@email.com",
+    "password": "yuzo123"
 }
 
 ### Get all users (protected)
-GET http://localhost:3003/users
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsImlhdCI6MTY1OTM3ODk2NiwiZXhwIjoxNjU5NDY1MzY2fQ.B1S_hfw6V8MN2w-qYF95bmAwsPxlaLc0-Qpg5QbV0Ow
+GET http://localhost:3003/users?search=
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3ZTZhNjBmLTM1MmUtNDBmNi04YjE5LWY5MGNiNmJiZjk5NiIsImlhdCI6MTY1OTQ3MTgwNiwiZXhwIjoxNjU5NTU4MjA2fQ.ryQ0VwkP9Ybpp6M5_Q4BPuHc_sXcplQJvanyBhmzp9k
+
+### Edit user (protected)
+PUT http://localhost:3003/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3ZTZhNjBmLTM1MmUtNDBmNi04YjE5LWY5MGNiNmJiZjk5NiIsImlhdCI6MTY1OTQ3MTgwNiwiZXhwIjoxNjU5NTU4MjA2fQ.ryQ0VwkP9Ybpp6M5_Q4BPuHc_sXcplQJvanyBhmzp9k
 Content-Type: application/json
 
 {
-    "email": "astrodev@email.com",
-    "password": "bananinha"
+    "nickname": "teste"
 }
-### Modificar 
-PUT  http://localhost:3003/users
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsImlhdCI6MTY1OTM3ODk2NiwiZXhwIjoxNjU5NDY1MzY2fQ.B1S_hfw6V8MN2w-qYF95bmAwsPxlaLc0-Qpg5QbV0Ow
-Content-Type: application/json
 
-
-{
-    "email": "drica@gmail.com",
-    
-}
+### Delete user (protected)
+DELETE http://localhost:3003/users/96cce702-3b2b-4b29-9213-785699f459f9
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3ZTZhNjBmLTM1MmUtNDBmNi04YjE5LWY5MGNiNmJiZjk5NiIsImlhdCI6MTY1OTQ3MTgwNiwiZXhwIjoxNjU5NTU4MjA2fQ.ryQ0VwkP9Ybpp6M5_Q4BPuHc_sXcplQJvanyBhmzp9k
