@@ -1,0 +1,22 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+### Signup
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "nickname": "yuzo5",
+    "email": "yuzo8@email.com",
+    "password": "abc123",
+    "role":"NORMAL"
+}
+
+### Get all recipes
+GET http://localhost:3003/recipes
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM1MTNiYmU2LThkMmItNDdlZS1iNDYyLWZiNzkzNzdkNDAzMyIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk1NTUxNTgsImV4cCI6MTY1OTY0MTU1OH0.c3Fr49UWA4gB3mZpPjS1duBJD_XC_QLzaMeC2O0kRCI
+
+
+### Get all users
+GET http://localhost:3003/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM1MTNiYmU2LThkMmItNDdlZS1iNDYyLWZiNzkzNzdkNDAzMyIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk1NTUxNTgsImV4cCI6MTY1OTY0MTU1OH0.c3Fr49UWA4gB3mZpPjS1duBJD_XC_QLzaMeC2O0kRCI
