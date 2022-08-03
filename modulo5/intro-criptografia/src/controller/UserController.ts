@@ -259,7 +259,7 @@ export class UserController {
                 errorCode = 401
                 throw new Error("Token inválido")
             }
-
+            if(payload.role !== USER_ROLES.ADMIN){
             const userDB = await userDatabase.findById(payload.id)
             const user = new User(
                 userDB.id,
@@ -279,8 +279,26 @@ export class UserController {
                 message: "Edição realizada com sucesso",
                 user
             })
-            errorCode = 401
-            throw new Error("Alteracao somente o Admin")
+        }
+        else {
+            const userDB = await userDatabase.findById(id)
+            const user = new User(
+                userDB.id,
+                userDB.nickname,
+                userDB.email,
+                userDB.password,
+                userDB.role
+
+            )
+            nickname && user.setNickname(nickname)
+            email && user.setEmail(email)
+            password && user.setPassword(password)
+
+            await userDatabase.editUser(user)
+            res.status(201).send({
+                message:"Ediçao realizada com sucesso", user
+            })
+        }
             
         } catch (error) {
             if (
@@ -307,8 +325,9 @@ export class UserController {
                 throw new Error("Token faltando ou inválido")
             }
 
-            if (typeof id !== "string") {
-                throw new Error("Parâmetro 'id' deve ser uma string")
+            if (payload.id !== USER_ROLES.ADMIN) {
+                errorCode = 403
+                throw new Error("Acesso somente para Admin' deve ser uma string")
             }
 
             const userDatabase = new UserDatabase()

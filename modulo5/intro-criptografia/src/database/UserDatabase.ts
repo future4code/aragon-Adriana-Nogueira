@@ -84,13 +84,6 @@ export class UserDatabase extends BaseDatabase {
             .where({ id })
 
     } 
-    public verRole = async (id: string) => {
-        const result =  await BaseDatabase
-            .connection(UserDatabase.TABLE_USERS)
-            .select("role")
-            .where({ id })
-            console.log(result)
-            return result [0].role === "ADMIN" ? true : false
-    }
+   
 
 }
