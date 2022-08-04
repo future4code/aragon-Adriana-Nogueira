@@ -26,6 +26,14 @@ export class UserDatabase extends BaseDatabase {
         
         return result[0]
     }
+    public checkIfExistsById = async (id: string) => {
+        const result: IUserDB[] = await BaseDatabase
+            .connection(UserDatabase.TABLE_USERS)
+            .select()
+            .where({ id })
+
+        return result[0] ? true : false
+    }
     public getAllUsers = async () => {
         const userDB: IUserDB[] = await BaseDatabase
             .connection(UserDatabase.TABLE_USERS)

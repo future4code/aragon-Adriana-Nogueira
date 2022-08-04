@@ -124,16 +124,7 @@ export class UserController {
                 userDB.role
             )
 
-            const hashManager = new HashManager()
-            const isPasswordCorrect = await hashManager.compare(
-                password,
-                user.getPassword()
-            )
-
-            if (!isPasswordCorrect) {
-                errorCode = 401
-                throw new Error("Senha inválida")
-            }
+           
 
             const payload: ITokenPayload = {
                 id: user.getId(),
@@ -147,42 +138,6 @@ export class UserController {
                 message: "Login realizado com sucesso",
                 token
             })
-        } catch (error) {
-            res.status(errorCode).send({ message: error.message })
-        }
-    }
-    public getAllUsers = async (req: Request, res: Response) => {
-        let errorCode = 400
-        try {
-            const token = req.headers.authorization
-
-            if (!token) {
-                errorCode = 401
-                throw new Error("Token faltando")
-            }
-
-            const authenticator = new Authenticator()
-            const payload = authenticator.getTokenPayload(token)
-
-            if (!payload) {
-                errorCode = 401
-                throw new Error("Token inválido")
-            }
-
-            const userDatabase = new UserDatabase()
-            const userDB = await userDatabase.getAllUsers()
-
-            const user = userDB.map((userDB) => {
-                return new User(
-                    userDB.id,
-                    userDB.nickname,
-                    userDB.email,
-                    userDB.password,
-                    userDB.role
-                )
-            })
-
-            res.status(200).send({ user })
         } catch (error) {
             res.status(errorCode).send({ message: error.message })
         }
