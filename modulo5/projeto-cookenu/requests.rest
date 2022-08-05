@@ -6,39 +6,48 @@ POST http://localhost:3003/users/signup
 Content-Type: application/json
 
 {
-    "nickname": "teste",
-    "email": "teste@gmail.com",
-    "password": "tesdtes",
-    "role":"NORMAL"
+    "nickname": "adri1",
+    "email": "adri1@email.com",
+    "password": "abc123"
 }
-
-### LOGIN
+### Login
 POST http://localhost:3003/users/login
 Content-Type: application/json
 
 {
-    "nickname": "drica4",
-    "email": "drica4@gmail.com",
-    
+    "email": "adri1@email.com",
+    "password": "abc123"
 }
 
 
-
 ### Get all recipes
-GET http://localhost:3003/recipes
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYwYTUxZjE5LWRiYzYtNGQ3Yi04YzQ3LTUxYjc1NGJmYTc0YiIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk2NDc0NzQsImV4cCI6MTY1OTczMzg3NH0.930trEGo6QPIQneItGJJbcEkMbfJ-DvlvYz885O7HBg
+GET http://localhost:3003/recipes?search=
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM5MDJlMzUwLThjNmYtNGQzZC04MmYwLTNjMzE3NDU1MDEzMSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk3MjczODYsImV4cCI6MTY1OTgxMzc4Nn0.MFdQsvEYn2Hc9TtNfH7PCb9e7hQz6QQY-3SIGoukRUk
 
-### Get all users
-GET http://localhost:3003/users
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYwYTUxZjE5LWRiYzYtNGQ3Yi04YzQ3LTUxYjc1NGJmYTc0YiIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk2NDc0NzQsImV4cCI6MTY1OTczMzg3NH0.930trEGo6QPIQneItGJJbcEkMbfJ-DvlvYz885O7HBg
-
-### Create Recipe
+### Criar Receita
 POST http://localhost:3003/recipes
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYwYTUxZjE5LWRiYzYtNGQ3Yi04YzQ3LTUxYjc1NGJmYTc0YiIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk2NDc0NzQsImV4cCI6MTY1OTczMzg3NH0.930trEGo6QPIQneItGJJbcEkMbfJ-DvlvYz885O7HBg
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg4NzlkMWE0LTE1NDctNDUxYi1hYmU0LTFjYmEyZjcxNDJkZSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk3Mjc5OTAsImV4cCI6MTY1OTgxNDM5MH0.P1WnUAApQnl9vXH7ZsY5gzwl_KBb-UZm_RFlfY-Zh1Y
 Content-Type: application/json
 
 {
     "title": "Ovos Benedict",
-    "desciption": "Ovos Meio Mechidos",
-    
+    "description": "Ovos feitos com gema meio mole"
 }
+
+### Editar receita
+PUT http://localhost:3003/recipes/f03017bb-2c08-4cdc-bb63-7fbd7cebe01f
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg4NzlkMWE0LTE1NDctNDUxYi1hYmU0LTFjYmEyZjcxNDJkZSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk3Mjc5OTAsImV4cCI6MTY1OTgxNDM5MH0.P1WnUAApQnl9vXH7ZsY5gzwl_KBb-UZm_RFlfY-Zh1Y
+Content-Type: application/json
+
+{
+    "title": "Bife acebolado"
+}
+
+### Deletar receita
+DELETE http://localhost:3003/recipes/f03017bb-2c08-4cdc-bb63-7fbd7cebe01f
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg4NzlkMWE0LTE1NDctNDUxYi1hYmU0LTFjYmEyZjcxNDJkZSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk3Mjc5OTAsImV4cCI6MTY1OTgxNDM5MH0.P1WnUAApQnl9vXH7ZsY5gzwl_KBb-UZm_RFlfY-Zh1Y
+
+
+### Delete usuario
+DELETE http://localhost:3003/users/f03017bb-2c08-4cdc-bb63-7fbd7cebe01f
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM5MDJlMzUwLThjNmYtNGQzZC04MmYwLTNjMzE3NDU1MDEzMSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk3MjczODYsImV4cCI6MTY1OTgxMzc4Nn0.MFdQsvEYn2Hc9TtNfH7PCb9e7hQz6QQY-3SIGoukRUk

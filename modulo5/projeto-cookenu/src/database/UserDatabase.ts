@@ -1,5 +1,6 @@
 import { IUserDB, User } from "../models/User"
 import { BaseDatabase } from "./BaseDatabase"
+import { RecipeDatabase } from "./RecipeDatabase"
 
 export class UserDatabase extends BaseDatabase {
     public static TABLE_USERS = "Cookenu_Users"
@@ -34,11 +35,16 @@ export class UserDatabase extends BaseDatabase {
 
         return result[0] ? true : false
     }
-    public getAllUsers = async () => {
-        const userDB: IUserDB[] = await BaseDatabase
+    public deletarUsuario = async (id: string) => {
+        await BaseDatabase
+            .connection(RecipeDatabase.TABLE_RECIPES)
+            .delete()
+            .where({creator_id: id})
+
+        await BaseDatabase
             .connection(UserDatabase.TABLE_USERS)
-            .select()
-        
-        return userDB
+            .delete()
+            .where({ id })
     }
+    
 }

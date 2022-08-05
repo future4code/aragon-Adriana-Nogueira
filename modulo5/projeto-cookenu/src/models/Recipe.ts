@@ -7,16 +7,16 @@ export interface IRecipeDB {
     creator_id: string
 }
 
+export class Recipe {
+    constructor(
+        private id: string,
+        private title: string,
+        private description: string,
+        private createdAt: Date,
+        private updatedAt: Date,
+        private creatorId: string
+    ) {}
 
-    export class Recipe {
-        constructor(
-            private id: string,
-            private title: string,
-            private description: string,
-            private createdAt: Date,
-            private updatedAt: Date,
-            private creatorId: string
-        ) {}
     public getId = () => {
         return this.id
     }
