@@ -18,7 +18,7 @@ export class User {
         private email: string,
         private password: string,
         private role: USER_ROLES
-    ) {}
+    ) { }
 
     public getId = () => {
         return this.id

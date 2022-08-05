@@ -15,7 +15,7 @@ export class Recipe {
         private createdAt: Date,
         private updatedAt: Date,
         private creatorId: string
-    ) {}
+    ) { }
 
     public getId = () => {
         return this.id

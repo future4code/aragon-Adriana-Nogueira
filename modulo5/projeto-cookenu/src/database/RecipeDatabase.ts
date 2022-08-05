@@ -8,15 +8,15 @@ export class RecipeDatabase extends BaseDatabase {
         const recipesDB: IRecipeDB[] = await BaseDatabase
             .connection(RecipeDatabase.TABLE_RECIPES)
             .select()
-        
+
         return recipesDB
     }
-    public buscarRecipe = async (search: string , limit: number, page: number) => {
+    public buscarRecipe = async (search: string, limit: number, page: number) => {
         const recipesDB: IRecipeDB[] = await BaseDatabase
             .connection(RecipeDatabase.TABLE_RECIPES)
             .select()
             .where("title", "LIKE", `%${search}%`)
-            
+
 
         return recipesDB
     }
@@ -30,37 +30,37 @@ export class RecipeDatabase extends BaseDatabase {
             updated_at: recipe.getUpdatedAt(),
             creator_id: recipe.getCreatorId()
         }
-}
-public editarRecipe = async (recipe: Recipe) => {
-    const recipeDB: IRecipeDB = {
-        id: recipe.getId(),
-        title: recipe.getTitle(),
-        description: recipe.getDescription(),
-        created_at: recipe.getCreatedAt(),
-        updated_at: recipe.getUpdatedAt(),
-        creator_id: recipe.getCreatorId()
+    }
+    public editarRecipe = async (recipe: Recipe) => {
+        const recipeDB: IRecipeDB = {
+            id: recipe.getId(),
+            title: recipe.getTitle(),
+            description: recipe.getDescription(),
+            created_at: recipe.getCreatedAt(),
+            updated_at: recipe.getUpdatedAt(),
+            creator_id: recipe.getCreatorId()
+        }
+
+        await BaseDatabase
+            .connection(RecipeDatabase.TABLE_RECIPES)
+            .update(recipeDB)
+            .where({ id: recipeDB.id })
     }
 
-    await BaseDatabase
-        .connection(RecipeDatabase.TABLE_RECIPES)
-        .update(recipeDB)
-        .where({ id: recipeDB.id })
-}
 
+    public searchId = async (id: string) => {
+        const result: IRecipeDB[] = await BaseDatabase
+            .connection(RecipeDatabase.TABLE_RECIPES)
+            .select()
+            .where({ id })
 
-public searchId = async (id: string) => {
-    const result: IRecipeDB[] = await BaseDatabase
-        .connection(RecipeDatabase.TABLE_RECIPES)
-        .select()
-        .where({ id })
+        return result[0]
+    }
 
-    return result[0]
-}
-
-public deletarRecipe = async (id: string) => {
-    await BaseDatabase
-        .connection(RecipeDatabase.TABLE_RECIPES)
-        .delete()
-        .where({ id })
-}
+    public deletarRecipe = async (id: string) => {
+        await BaseDatabase
+            .connection(RecipeDatabase.TABLE_RECIPES)
+            .delete()
+            .where({ id })
+    }
 }

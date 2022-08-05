@@ -24,7 +24,7 @@ export class UserDatabase extends BaseDatabase {
             .connection(UserDatabase.TABLE_USERS)
             .select()
             .where({ email })
-        
+
         return result[0]
     }
     public checkIfExistsById = async (id: string) => {
@@ -39,12 +39,12 @@ export class UserDatabase extends BaseDatabase {
         await BaseDatabase
             .connection(RecipeDatabase.TABLE_RECIPES)
             .delete()
-            .where({creator_id: id})
+            .where({ creator_id: id })
 
         await BaseDatabase
             .connection(UserDatabase.TABLE_USERS)
             .delete()
             .where({ id })
     }
-    
+
 }
