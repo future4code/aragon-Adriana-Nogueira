@@ -62,7 +62,7 @@ O que funciona:
 Criar usuario.
 Login e token criado.
 Lista de Receitas 
-Deletar uma usuario.
+Deletar um usuario.
 Deletar receita.
 
 Não estou conseguindo:

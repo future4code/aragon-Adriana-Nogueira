@@ -158,20 +158,20 @@ export class RecipeController {
 
             if (title && typeof title !== "string") {
                 errorCode = 422
-                throw new Error("Parâmetro 'title' deve ser uma string")
+                throw new Error("'title' deve ser uma string")
             }
 
             if (description && typeof description !== "string") {
                 errorCode = 422
-                throw new Error("Parâmetro 'description' deve ser uma string")
+                throw new Error("'description' deve ser uma string")
             }
 
             if (title && title.length < 3) {
-                throw new Error("O parâmetro 'title' deve possuir ao menos 3 caracteres")
+                throw new Error("'title' deve possuir ao menos 3 caracteres")
             }
 
             if (description && description.length < 10) {
-                throw new Error("O parâmetro 'description' deve possuir ao menos 10 caracteres")
+                throw new Error("'description' deve possuir ao menos 10 caracteres")
             }
 
             const recipeDataBase = new RecipeDatabase()
