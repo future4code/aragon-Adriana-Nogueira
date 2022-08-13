@@ -16,7 +16,7 @@ export class Post {
         private content: string,
         private userId: string,
         private likes: number = 0
-    ) {}
+    ) { }
 
     public getId = () => {
         return this.id
@@ -50,3 +50,39 @@ export class Post {
         this.likes = newLikes
     }
 }
+export interface ICreatePost {
+    content: string,
+    userId: string,
+}
+
+
+
+export interface IGetPostsInputDTO {
+    token: string,
+}
+export interface IGetPosts {
+    id: string,
+    content: string,
+    userId: string,
+    likes: number
+}
+
+export interface IGetPostOutputDTO {
+    posts: IGetPosts[]
+}
+
+export interface ICreatePostDTO {
+    token: string,
+    content: string,
+}
+
+export interface IDeletePostInputDTO {
+    token: string,
+    id: string
+}
+
+export interface ILikePostInputDTO {
+    token: string,
+    id: string,
+}
+

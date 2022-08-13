@@ -10,3 +10,42 @@ Content-Type: application/json
     "email": "adriana@gmail.com",
     "password": "abc123"
 }
+
+### Endpoint de login
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    
+    "email": "adriana@gmail.com",
+    "password": "abc123"
+}
+
+
+
+### Endpoint que cria um post
+POST http://localhost:3003/posts
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZkNmY3YTM2LTc5MmEtNGE0Zi1iNGZiLTllZDAwMGEyYzU2MCIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjAzNDg1NTMsImV4cCI6MTY2MDQzNDk1M30.0B5EhTNKFr4ugv0MLM2a9yua8LvBbsgtoVKy0eGc7tg
+
+{
+    "content": "testando postagem de novo"
+}
+
+
+### Endpoint que pega todos os posts
+GET http://localhost:3003/posts
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZkNmY3YTM2LTc5MmEtNGE0Zi1iNGZiLTllZDAwMGEyYzU2MCIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjAzNDg1NTMsImV4cCI6MTY2MDQzNDk1M30.0B5EhTNKFr4ugv0MLM2a9yua8LvBbsgtoVKy0eGc7tg
+
+### Endpoint que deleta post
+DELETE http://localhost:3003/posts/203
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MDIzNTg4NywiZXhwIjoxNjYwMzIyMjg3fQ.WarNy8IBU1HKxLPAYITy2xf-gM1D_UHxW3cvdIujliM
+
+### Endpoint que curte um post
+POST http://localhost:3003/posts/203
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA2OTMxYjk1LTdmNWQtNDc5ZC1iMWNkLTFkZmEzZDhkYmM0NCIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjAyNDAxNzIsImV4cCI6MTY2MDMyNjU3Mn0.bt6hID226qWTaoEuU0KS_s5JZX3nK3Hr_l1vusFa80A
+
+
+### Endpoint que deleta like
+DELETE http://localhost:3003/posts/:id
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA2OTMxYjk1LTdmNWQtNDc5ZC1iMWNkLTFkZmEzZDhkYmM0NCIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjAyNDAxNzIsImV4cCI6MTY2MDMyNjU3Mn0.bt6hID226qWTaoEuU0KS_s5JZX3nK3Hr_l1vusFa80A
