@@ -1,5 +1,5 @@
 import { PostDatabase } from "../database/PostDatabase"
-import { ICreatePost, ICreatePostDTO, IDeletePostInputDTO, IGetPostOutputDTO, IGetPostsInputDTO, ILikeDB, ILikePostInputDTO, Post } from "../models/Post"
+import { ICreatePost, ICreatePostDTO, IDeletePostInputDTO, IDislikeInputDTO, IEditInputDTO, IGetPostOutputDTO, IGetPostsInputDTO, ILikeDB, ILikePostInputDTO, IPostDB, Post } from "../models/Post"
 import { USER_ROLES } from "../models/User"
 import { Authenticator, ITokenPayload } from "../services/Authenticator"
 import { HashManager } from "../services/HashManager"
@@ -146,7 +146,84 @@ export class PostBusiness {
         return response
 
     }
-} 
+    public dislikePost = async (input: IDislikeInputDTO) => {
+        const token = input.token
+        const id = input.id
 
+        const payload = this.authenticator.getTokenPayload(token)
+
+        if (!payload) {
+            throw new Error("Token inválido/ausente.")
+        }
+
+        const findPostById = await this.postDatabase.findById(id)
+
+        if(!findPostById){
+            throw new Error("Post não encontrado.");
+        }
+
+        const findLikePost = await this.postDatabase.findLikePost(id, payload.id)
+
+        if (!findLikePost) {
+            throw new Error("Você não curtiu esse post.");
+        }
+
+        await this.postDatabase.dislikePost(id,)
+        const response = {
+            message: "Post descurtido!"
+        }
+
+        return response
+    }
+
+
+    public editPost = async (input: IEditInputDTO) => {
+        const token = input.token
+        const id = input.id
+        const content = input.content
+
+        const payload = this.authenticator.getTokenPayload(token)
+
+        if (!payload) {
+            throw new Error("Token inválido/ausente.")
+        }
+
+        const findPostById = await this.postDatabase.findById(id)
+
+        if(!findPostById){
+            throw new Error("Post não encontrado.");
+        }
+
+        if(!content){
+            throw new Error("Parâmetro ausente.")
+        }
+
+        if(content.length < 1 || typeof content !== "string"){
+            throw new Error("Parâmetro inválido.")
+        }
+
+        if (payload.role === USER_ROLES.NORMAL) {
+            if (payload.id !== findPostById.user_id) {
+                throw new Error("Somente admins podem editar posts de outros usuários.");
+            }
+        }
+
+        const updatePost : IPostDB = {
+            id: id,
+            content: content,
+            user_id: payload.id
+        }
+
+        await this.postDatabase.editPost(updatePost)
+
+        const response = {
+            message: "Edição realizada com sucesso!"
+        }
+
+        return response
+    }
+}
+
+    
 
 

@@ -65,12 +65,12 @@ export class PostDatabase extends BaseDatabase {
             .insert(newLikeDB)
     }
 
-    public findLikePost = async (id: string, userId: string) => {
+    public findLikePost = async (post_id: string, userId: string) => {
         const postLikeDB: ILikeDB[] = await BaseDatabase
             .connection("Labook_Likes")
             .select()
             .where("user_id", "=", `${userId}`)
-            .andWhere("post_id", "=", `${id}`)
+            .andWhere("post_id", "=", `${post_id}`)
 
         return postLikeDB[0]
     }
@@ -80,6 +80,22 @@ export class PostDatabase extends BaseDatabase {
         .connection(PostDatabase.TABLE_LIKES)
         .delete()
         .where("post_id", "=", `${id}`)
+        }
+    
+    public editPost = async (post: IPostDB) => {
+
+        const postDB: IPostDB = {
+            id: post.id,
+            content: post.content,
+            user_id: post.user_id
+        }
+
+        await BaseDatabase
+            .connection(PostDatabase.TABLE_POSTS)
+            .update(postDB)
+            .where({ id: post.id})
     }
-} 
+
+}
+
 

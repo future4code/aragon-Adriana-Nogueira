@@ -85,4 +85,15 @@ export interface ILikePostInputDTO {
     token: string,
     id: string,
 }
+export interface IDislikeInputDTO {
+    token: string,
+    id: string,
+}
+
+export interface IEditInputDTO {
+    token: string,
+    id: string,
+    content: string,
+} 
+
 
