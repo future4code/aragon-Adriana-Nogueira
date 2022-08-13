@@ -50,14 +50,14 @@ export class PostController {
         }
     }
 
-    public likePost = async (req: Request, res: Response) => {
+    public postLike = async (req: Request, res: Response) => {
         try {
             const input: ILikePostInputDTO = {
                 token: req.headers.authorization,
                 id: req.params.id
             }
 
-            const response = await this.postBusiness.likePost(input)
+            const response = await this.postBusiness.postLike(input)
 
             res.status(200).send(response)
 

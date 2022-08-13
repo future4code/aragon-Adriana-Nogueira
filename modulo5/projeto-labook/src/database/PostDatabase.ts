@@ -5,15 +5,7 @@ export class PostDatabase extends BaseDatabase {
     public static TABLE_POSTS = "Labook_Posts"
     public static TABLE_LIKES = "Labook_Likes"
 
-    public getPosts = async () => {
-      
-        const postDB: IPostDB[] = await BaseDatabase
-        .connection(PostDatabase.TABLE_POSTS)
-            .select()    
-        
-        return postDB
-    }
-
+  
     public createPost = async (post: Post) => {
         const postDB: IPostDB = {
             id: post.getId(),
@@ -26,6 +18,16 @@ export class PostDatabase extends BaseDatabase {
             .connection(PostDatabase.TABLE_POSTS)
             .insert(postDB)
     }
+
+    public getPosts = async () => {
+      
+        const postDB: IPostDB[] = await BaseDatabase
+        .connection(PostDatabase.TABLE_POSTS)
+            .select()    
+        
+        return postDB
+    }
+
     public deletePost = async (id: string) => {
 
         await BaseDatabase
@@ -40,7 +42,7 @@ export class PostDatabase extends BaseDatabase {
 
     }
 
-    public findPostById = async (id: string) => {
+    public findById = async (id: string) => {
         const postDB: IPostDB[] = await BaseDatabase
             .connection(PostDatabase.TABLE_POSTS)
             .select()
@@ -49,7 +51,7 @@ export class PostDatabase extends BaseDatabase {
         return postDB[0]
     }
 
-    public likePost = async (input: ILikeDB) => {
+    public postLike = async (input: ILikeDB) => {
         const newLikeDB: ILikeDB = {
             id: input.id,
             post_id: input.post_id,
@@ -58,6 +60,8 @@ export class PostDatabase extends BaseDatabase {
 
         await BaseDatabase
             .connection(PostDatabase.TABLE_LIKES)
+            .update(newLikeDB)
+            .where({id:newLikeDB.post_id})
             .insert(newLikeDB)
     }
 

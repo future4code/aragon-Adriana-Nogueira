@@ -82,7 +82,7 @@ export class PostBusiness {
             throw new Error("Token inválido/ausente.")
         }
 
-        const findPost = await this.postDatabase.findPostById(id)
+        const findPost = await this.postDatabase.findById(id)
 
         if (!findPost) {
             throw new Error("Post não encontrado.")
@@ -103,17 +103,21 @@ export class PostBusiness {
         return response
     }
 
-    public likePost = async (input: ILikePostInputDTO) => {
+    public postLike = async (input: ILikePostInputDTO) => {
         const token = input.token
         const id = input.id
+
+        if(!token){
+            throw new Error("Token ausente.")
+        }
 
         const payload = this.authenticator.getTokenPayload(token)
 
         if (!payload) {
-            throw new Error("Token inválido/ausente.")
+            throw new Error("Token inválido.")
         }
 
-        const findPostById = await this.postDatabase.findPostById(id)
+        const findPostById = await this.postDatabase.findById(id)
 
         if(!findPostById){
             throw new Error("Post não encontrado.");
@@ -122,7 +126,7 @@ export class PostBusiness {
         const findLikePost = await this.postDatabase.findLikePost(id, payload.id)
 
         if (findLikePost) {
-            throw new Error("Você já curtiu esse post.");
+            throw new Error("Uusario não pode curtir mais de uma vez.");
         }
 
         const idPost = this.idGenerator.generate()
@@ -133,7 +137,7 @@ export class PostBusiness {
             user_id : payload.id
         }
 
-        await this.postDatabase.likePost(newLike)
+        await this.postDatabase.postLike(newLike)
 
         const response = {
             message: "Post curtido!"
