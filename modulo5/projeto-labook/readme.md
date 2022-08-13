@@ -39,7 +39,9 @@ TESTES
 
  ### ENPOINT DER EDITAR POST - OK
 
-Link Heroku 
+Link Heroku
+
+https://projeto-labook-1.herokuapp.com/
 
 
 Ferramentas utilizada no projeto
