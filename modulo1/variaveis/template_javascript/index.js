@@ -1,5 +1,7 @@
 //Exercício 1
 //resultado do que será impresso e 10,5
+// Primeiro console.log: 10
+//   Segundo console.log: 10, 5
 
 //Exercício 2
 //Resultado do que será impresso é 10 10 10
