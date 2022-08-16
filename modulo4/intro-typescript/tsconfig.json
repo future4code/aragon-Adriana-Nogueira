@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es2021", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "module": "commonjs", /* Specify what module code is generated. */
+    "sourceMap": true /* Generates corresponding '.map' file. */,
+    "outDir": "./build" /* Redirect output structure to the directory. */,
+    "rootDir": "./src" /* Specify the root directory of input files. */,
+    "removeComments": true /* Do not emit comments to output. */,
+    "noImplicitAny": true /* Raise error on declarations with an implied 'any' type. */                            /* Skip type checking all .d.ts files. */
+  }
+}

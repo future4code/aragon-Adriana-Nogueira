@@ -1,0 +1,35 @@
+### Ping
+GET http://localhost:3003/ping
+
+
+### Criar perfume
+POST http://localhost:3003/perfumes
+content-Type:  application/json
+
+{
+       
+   "name": "Ferrari Black",
+    "brand": "Masculino",
+    "price": 250.00,
+    "ml": 100
+   }
+
+### Get list Perfumes
+GET http://localhost:3003/perfumes
+
+
+
+### Get list Perfumes
+GET http://localhost:3003/perfumes?s=01
+
+
+### Put edit Perfumes
+PUT http://localhost:3003/perfumes/03
+content-Type:  application/json
+
+{
+    "price": 529
+}
+
+### Get list Perfumes
+DELETE  http://localhost:3003/perfumes/01

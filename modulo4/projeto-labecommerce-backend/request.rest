@@ -1,0 +1,50 @@
+### Ping
+GET http://localhost:3003/ping
+
+
+###BUSCAR USUARIO
+GET http://localhost:3003/user
+
+
+### CADASTRAR USUARIO
+POST http://localhost:3003/user
+
+Content-Type: application/json
+
+{
+    "email": "email@gmail.com",
+    "password": "teste123",
+    
+}
+
+### BUSCAR PRODUTOS
+GET http://localhost:3003/products
+
+
+### CADASTRAR PRODUTO
+POST http://localhost:3003/products
+Content-Type: application/json
+
+{
+    "name": "Test product2",
+    "price": 555.99
+}
+
+### CADASTRAR COMPRA
+POST http://localhost:3003/purchases
+Content-Type: application/json
+
+ {
+        
+        "user_id": "101",
+        "product_id": "201",
+        "quantity": 1,
+        "total_price": 99.00
+    }
+
+
+### BUSCAR COMPRA
+ GET  http://localhost:3003/users/101/purchases
+ 
+
+

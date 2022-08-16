@@ -1,0 +1,19 @@
+{
+  "name": "aula-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"clear && node exercicio2.js",
+    "add":  "clear && node exercicio2.js 2 2",
+    "sub":  "clear && node exercicio2.js 10 2",
+    "mult":  "clear && node exercicio2.js 50 2",
+    "div":  "clear && node exercicio2.js 100 2"
+  },
+  "keywords": [],
+  "author": "Adriana Nogueira",
+  "license": "ISC"
+  
+  }
+

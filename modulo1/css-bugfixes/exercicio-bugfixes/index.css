@@ -1,0 +1,201 @@
+/** 
+  *
+  *  ESTILOS GERAIS 
+  *
+  **/
+
+  
+   * {
+    margin: 0;
+    padding: 0;
+    font-family:minhaFonte;
+
+
+}
+
+h2 {
+    background-color: #fe7e02;
+    padding: 10px 5px 10px 5px;
+    color: white;
+    text-align: center;
+    font-family:minhaFonte;
+
+    
+}
+
+input {
+    height: 20px;
+    width: 500px;
+    border-top:none;
+    border-right: none;
+    border-left: none;
+
+}
+
+button:focus {
+    color: white;
+
+    
+    
+}
+
+img {
+    width: 100px;
+    opacity: 0.7;
+}
+img:hover{
+    background-color: #2274a5;
+}
+
+div>p:first-child {
+    display: block;
+    font-family: minhaFonte;
+}
+
+div img {
+    display: inline;
+
+}
+
+.botao-amarelo {
+
+    background-color: #ffaf43;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    position:relative;   
+   
+ 
+}
+
+.botao-amarelo:hover {
+    background-color: #c44f00;
+    
+}
+
+.container {
+   
+    font-family: minhaFonte;
+    padding: 2%;
+    height: 500px;
+    text-align: center;
+}
+
+.icone {
+    height: 15px;
+    width: auto;
+}
+
+
+
+
+/** 
+  *
+  *  ESTILOS HOME 
+  *
+  **/
+
+#container-de-descricao {
+    padding: 23px;
+    background-color: #2274a5;
+    color: white;
+    text-align: center;
+    font-family: minhaFonte;
+}
+
+#container-de-descricao > ol {
+  display: inline;
+  margin: 20px;
+  width: 100%;
+  font-family: minhaFonte;
+  
+  
+
+    
+}
+
+#container-para-comprar {
+    background-color: #e7eb90;
+    
+
+}
+
+#container-para-comprar>p {
+    color: #c44f00;
+    padding: 100px 0;
+    font-size: 60px;
+    font-family: minhaFonte;
+}
+
+
+/**
+  *
+  *  ESTILOS COMPRAR 
+  *
+  **/
+
+div:nth-child(2),
+div:last-child {
+    text-align: center;
+    font-family: minhaFonte;
+   
+}
+    
+
+table {
+    
+    
+    text-align: center;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    font-family: minhaFonte;
+   
+    
+}
+
+td button {
+
+    background-color: #fadf63;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+
+}
+td button:hover{
+    background-color: burlywood;
+}
+
+
+.container-do-search {
+    margin-top: 30px;
+    height: 100px;
+    
+}
+.container-do-search :active{
+    color: #c44f00;
+
+}
+
+
+#back-button {
+  
+    background-color: white;
+    text-align: center;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    font-family: minhaFonte;
+    color: black;
+
+
+}
+
+#back-button:hover {
+    background-color: #635a3d
+}
