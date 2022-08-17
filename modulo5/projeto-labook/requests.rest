@@ -1,0 +1,60 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+### Endpoint de signup
+POST http://localhost:3003/users/signup 
+Content-Type: application/json
+
+{
+    "name": "TESTE",
+    "email": "teste@gmail.com",
+    "password": "teste"
+}
+
+### Endpoint de login
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    
+    "email": "teste@gmail.com",
+    "password": "teste"
+}
+
+
+
+### Endpoint que cria um post
+POST http://localhost:3003/posts
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFmNDkzYjc5LTg1NjItNGE2OS05ZDlhLWRlMWU3OTI4YWE0OSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjA0MzE2NDQsImV4cCI6MTY2MDUxODA0NH0.KYOoXSUOi38lBWmUaEY9rdmSk9E-OezNisnh5QQkmi4
+
+{
+    "content": "mais um post"
+}
+
+
+### Endpoint que pega todos os posts
+GET http://localhost:3003/posts
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFmNDkzYjc5LTg1NjItNGE2OS05ZDlhLWRlMWU3OTI4YWE0OSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjA0MzE2NDQsImV4cCI6MTY2MDUxODA0NH0.KYOoXSUOi38lBWmUaEY9rdmSk9E-OezNisnh5QQkmi4
+
+### Endpoint que deleta post
+DELETE http://localhost:3003/posts/201
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFmNDkzYjc5LTg1NjItNGE2OS05ZDlhLWRlMWU3OTI4YWE0OSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjA0MzE2NDQsImV4cCI6MTY2MDUxODA0NH0.KYOoXSUOi38lBWmUaEY9rdmSk9E-OezNisnh5QQkmi4
+
+### Endpoint que curte um post
+POST http://localhost:3003/posts/8d991157-806b-4fe7-a228-4f98b98d5220
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFmNDkzYjc5LTg1NjItNGE2OS05ZDlhLWRlMWU3OTI4YWE0OSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjA0MzE2NDQsImV4cCI6MTY2MDUxODA0NH0.KYOoXSUOi38lBWmUaEY9rdmSk9E-OezNisnh5QQkmi4
+
+### Endpoint que deleta like
+DELETE http://localhost:3003/posts/8d991157-806b-4fe7-a228-4f98b98d5220
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFmNDkzYjc5LTg1NjItNGE2OS05ZDlhLWRlMWU3OTI4YWE0OSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjA0MzE2NDQsImV4cCI6MTY2MDUxODA0NH0.KYOoXSUOi38lBWmUaEY9rdmSk9E-OezNisnh5QQkmi4
+
+
+### Endpoint que edita post
+PUT http://localhost:3003/posts/8d991157-806b-4fe7-a228-4f98b98d5220
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFmNDkzYjc5LTg1NjItNGE2OS05ZDlhLWRlMWU3OTI4YWE0OSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjA0MzE2NDQsImV4cCI6MTY2MDUxODA0NH0.KYOoXSUOi38lBWmUaEY9rdmSk9E-OezNisnh5QQkmi4
+Content-Type: application/json
+
+{
+    "content": "Testando endpoint de editar"
+}
