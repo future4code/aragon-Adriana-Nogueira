@@ -28,7 +28,7 @@ export const users: IUserDB[] = [
 export const shows: IShowDB[] = [
     {
         id: "201",
-        band: "Foo Fighters",
+        band: "Metalica",
         starts_at: new Date("2022/12/05")
     },
     {

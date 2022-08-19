@@ -1,7 +1,7 @@
 import { Router } from 'express'
-import { ShowBusiness } from '../business/ShowBusiness'
-import { ShowController } from '../controller/ShowController'
-import { ShowDatabase } from '../database/ShowDatabase'
+import { ShowBusiness } from '../business/showBusiness'
+import { ShowController } from '../controller/showController'
+import { ShowDatabase } from '../database/showDatabase'
 import { Authenticator } from '../services/Authenticator'
 import { HashManager } from '../services/HashManager'
 import { IdGenerator } from '../services/IdGenerator'
@@ -17,3 +17,5 @@ const showController = new ShowController(
     )
 )
 
+showRouter.post("/", showController.createShow)
+showRouter.get("/", showController.getShows)

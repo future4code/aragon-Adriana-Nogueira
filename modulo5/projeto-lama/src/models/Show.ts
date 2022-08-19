@@ -51,9 +51,9 @@ export class Show {
     }
 
 } export interface ICreateShowInputDTO {
-    token: string,
+    token: string
     band: string
-    startAt: string,
+    startsAt: string
 }
 
 export interface ICreateShowOutputDTO {
@@ -67,8 +67,34 @@ export interface IGetShowInputDTO {
 }
 
 export interface IGetShowOutputDTO {
-    shows: IShowDB[]
+    shows: Show[]
 }
 
+export interface IBuyTicketInputDTO{
+    token: string,
+    showId: string
+}
+
+export interface IBuyTicketInputDTO {
+    token: string,
+    showId: string
+}
+
+export interface IGetShowsOutputDTO {
+    shows: Show[]
+}
+
+export interface IBuyTicketOutputDTO {
+    message: string
+}
+
+export interface IDeleteTicketInputDTO {
+    token: string,
+    ticketId: string
+}
+
+export interface IDeleteTickeOutputDTO{
+    message: string
+} 
 
 

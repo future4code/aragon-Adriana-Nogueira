@@ -16,54 +16,54 @@ describe("Testando UserBusiness", () => {
     )
 
 
-test("signup bem sucedido", async () => {
-    const input: ISignupInputDTO = {
-        name: "alice",
-        email: "alice@gmail.com",
-        password: "alice99"
-    }
-
-    const response = await userBusiness.signup(input)
-
-    expect(response.message).toEqual("Cadastro realizado com sucesso")
-    expect(response.token).toEqual("token-mock")
-})
-
-test("deve retornar erro caso o nome seja uma string vazia", async () => {
-    expect.assertions(2)
-    
-    try {
+    test("signup bem sucedido", async () => {
         const input: ISignupInputDTO = {
-            name: "",
+            name: "alice",
             email: "alice@gmail.com",
             password: "alice99"
         }
 
-        await userBusiness.signup(input)
-    } catch (error: unknown) {
-        if (error instanceof BaseError) {
-            expect(error.statusCode).toEqual(400)
-            expect(error.message).toEqual("Parâmetro 'name' inválido: mínimo de 3 caracteres")
-        }
-    }
-})
+        const response = await userBusiness.signup(input)
 
-test("deve retornar erro caso o nome não seja uma string", async () => {
-    expect.assertions(2)
-    
-    try {
-        const input = {
-            name: undefined,
-            email: "alice@gmail.com",
-            password: "alice99"
-        } as unknown as ISignupInputDTO
+        expect(response.message).toEqual("Cadastro realizado com sucesso")
+        expect(response.token).toEqual("token-mock")
+    })
 
-        await userBusiness.signup(input)
-    } catch (error: unknown) {
-        if (error instanceof BaseError) {
-            expect(error.statusCode).toEqual(400)
-            expect(error.message).toEqual("Parâmetro 'name' inválido: deve ser uma string")
+    test("deve retornar erro caso o nome seja uma string vazia", async () => {
+        expect.assertions(2)
+
+        try {
+            const input: ISignupInputDTO = {
+                name: "",
+                email: "alice@gmail.com",
+                password: "alice99"
+            }
+
+            await userBusiness.signup(input)
+        } catch (error: unknown) {
+            if (error instanceof BaseError) {
+                expect(error.statusCode).toEqual(400)
+                expect(error.message).toEqual("Parâmetro 'name' inválido: mínimo de 3 caracteres")
+            }
         }
-    }
-})
+    })
+
+    test("deve retornar erro caso o nome não seja uma string", async () => {
+        expect.assertions(2)
+
+        try {
+            const input = {
+                name: undefined,
+                email: "alice@gmail.com",
+                password: "alice99"
+            } as unknown as ISignupInputDTO
+
+            await userBusiness.signup(input)
+        } catch (error: unknown) {
+            if (error instanceof BaseError) {
+                expect(error.statusCode).toEqual(400)
+                expect(error.message).toEqual("Parâmetro 'name' inválido: deve ser uma string")
+            }
+        }
+    })
 })
