@@ -1,4 +1,4 @@
-import { ShowBusiness } from "../../src/business/showBusiness"
+import { ShowBusiness } from "../../src/business/ShowBusiness"
 import { ICreateShowInputDTO } from "../../src/models/Show"
 import { AuthenticatorMock } from "../mocks/services/AuthenticatorMock"
 import { HashManagerMock } from "../mocks/services/HashManagerMock"

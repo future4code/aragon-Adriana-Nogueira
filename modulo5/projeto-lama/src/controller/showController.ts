@@ -1,9 +1,8 @@
-import { ShowBusiness } from "../business/showBusiness"
-import { IBuyTicketInputDTO, ICreateShowInputDTO, IShowDB, ITicketDB } from "../models/Show"
+import { ShowBusiness } from "../business/ShowBusiness"
+import { IBuyTicketInputDTO, ICreateShowInputDTO, IDeleteTicketInputDTO, IShowDB, ITicketDB } from "../models/Show"
 import {Request, Response } from "express"
 import { BaseError } from "../errors/BaseError"
-import { ShowDatabase } from "../database/showDatabase"
-import { BaseDatabase } from "../database/BaseDatabase"
+
 
 
 export class ShowController {
@@ -66,6 +65,26 @@ export class ShowController {
             }
 
             res.status(500).send({ message: "Erro inesperado ao buscar todos os show." })
+        }
+    }
+
+    public removeShow = async (req: Request, res: Response) => {
+        try {
+            const input: IDeleteTicketInputDTO = {
+                token: req.headers.authorization,
+                ticketId: req.params.id,
+            }
+
+            const response = await this.showBusiness.removeShow(input)
+            res.status(200).send(response)
+        } catch (error: unknown) {
+            if (error instanceof BaseError) {
+                return res.status(error.statusCode).send({ message: error.message })
+            }
+
+            res.status(500).send({
+                message: "Erro inesperado ao remover reserva de ingressos",
+            })
         }
     }
 

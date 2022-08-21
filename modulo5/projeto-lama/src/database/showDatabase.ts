@@ -67,7 +67,10 @@ public newTicket = async (ticket: ITicketDB) => {
         .connection(ShowDatabase.TABLE_TICKETS)
         .insert(ticket)
 }
+public deleteTicket = async (id: string) => {
+    await BaseDatabase
+    .connection(ShowDatabase.TABLE_TICKETS)
+    .delete()
+    .where({id})
 }
-
-
-
+} 

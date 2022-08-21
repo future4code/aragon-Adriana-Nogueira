@@ -70,12 +70,8 @@ export interface IGetShowOutputDTO {
     shows: Show[]
 }
 
-export interface IBuyTicketInputDTO{
-    token: string,
-    showId: string
-}
 
-export interface IBuyTicketInputDTO {
+export interface IBuyTicketInputDTO{
     token: string,
     showId: string
 }

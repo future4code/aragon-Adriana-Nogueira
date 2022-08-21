@@ -1,5 +1,5 @@
 
-import { ShowBusiness } from "../../src/business/showBusiness"
+import { ShowBusiness } from "../../src/business/ShowBusiness"
 import { AuthenticatorMock } from "../mocks/services/AuthenticatorMock"
 import { HashManagerMock } from "../mocks/services/HashManagerMock"
 import { IdGeneratorMock } from "../mocks/services/IdGeneratorMock"

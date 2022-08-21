@@ -3,7 +3,7 @@ import { ConflictError } from "../errors/ConflictError";
 import { NotFoundError } from "../errors/NotFoundError";
 import { RequestError } from "../errors/RequestError";
 import { UnauthorizedError } from "../errors/UnauthorizedError";
-import { IBuyTicketInputDTO, ICreateShowInputDTO, ICreateShowOutputDTO, IGetShowOutputDTO, ITicketDB, Show } from "../models/Show";
+import { IBuyTicketInputDTO, IBuyTicketOutputDTO, ICreateShowInputDTO, ICreateShowOutputDTO, IDeleteTickeOutputDTO, IDeleteTicketInputDTO, IGetShowOutputDTO, ITicketDB, Show } from "../models/Show";
 import { USER_ROLES } from "../models/User";
 import { Authenticator } from "../services/Authenticator";
 import { HashManager } from "../services/HashManager";
@@ -86,7 +86,7 @@ export class ShowBusiness {
         }
 
         if(typeof showId !== "string"){
-            throw new RequestError("'showId' inválido: deve ser uma string.")
+            throw new RequestError("Parâmetro 'showId' inválido: deve ser uma string.")
         }
 
         const findShow = await this.showDatabase.verifyShow(showId)
@@ -98,7 +98,7 @@ export class ShowBusiness {
         const findTicket = await this.showDatabase.verifyTicketShow(showId, payload.id)
 
         if(findTicket){
-            throw new ConflictError("Show Ja comprado.")
+            throw new ConflictError("Você já comprou ingresso para esse show.")
         }
 
         const shows = await this.getShows()
@@ -128,10 +128,38 @@ export class ShowBusiness {
         return response
     }
 
+
+    public removeShow = async (input: IDeleteTicketInputDTO) => {
+        const { token, ticketId} = input
+
+        const payload = this.authenticator.getTokenPayload(token)
+
+        if (!payload) {
+            throw new UnauthorizedError("Token ausente/inválido.")
+        }
+
+        if (!ticketId) {
+            throw new RequestError("Parâmetros ausentes.")
+        }
+
+        const findTicket = await this.showDatabase.verifyTicketShow(ticketId, payload.id)
+
+        if (!findTicket) {
+            throw new NotFoundError("Você não comprou ingresso para esse show.")
+        }
+
+        if (payload.role === USER_ROLES.NORMAL) {
+            if (payload.id !== findTicket.user_id) {
+                throw new Error("Somente admins podem deletar ingressos de outros usuários.");
+            }
+        }
+
+        await this.showDatabase.deleteTicket(ticketId)
+
+        const response: IBuyTicketOutputDTO = {
+            message: "Ingresso deletado com sucesso!"
+        }
+
+        return response
+    }
 } 
-
-
-
-
-
-
