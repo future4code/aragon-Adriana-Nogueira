@@ -24,30 +24,6 @@ Content-Type: application/json
     "password": "abc123"
 }
 
-
 ### Endpoint get products
-GET http://localhost:3003/products?search=cane
+GET http://localhost:3003/products?search=
 
-
-### Endpoint search products by tag
-GET http://localhost:3003/products/tag?search=balada
-
-
-### Endpoint post product
-POST http://localhost:3003/products
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MTM3MTM2NywiZXhwIjoxNjYxNDU3NzY3fQ.meEblns3OEQCVLdMSujullweM6DpiZEc22PCY8PMN54
-
-{
-    "name": "Vestido canelado"
-}
-
-
-### Endpoint add tag
-POST http://localhost:3003/products/tag/0af4c4b7-37ed-46fa-ac01-089f30d673a1
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MTM3MTM2NywiZXhwIjoxNjYxNDU3NzY3fQ.meEblns3OEQCVLdMSujullweM6DpiZEc22PCY8PMN54
-Content-Type: application/json
-
-{
-    "tagName": "Neutro"
-}

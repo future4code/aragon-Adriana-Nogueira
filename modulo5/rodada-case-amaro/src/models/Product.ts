@@ -46,31 +46,39 @@ export class Product {
         this.tags = newTag
     }
 }
-
-export interface IGetProductsInputDTO{
+export interface IGetProductsInputDTO {
     search: string
 }
 
-export interface IGetProductsOutputDTO{
+export interface IGetProductsOutputDTO {
     products: Product[]
 }
 
-export interface IProductInputDTO{
+export interface IGetProductsByTagOutputDTO{
+    products: IProductDB[]
+}
+
+export interface IProductInputDTO {
     token: string,
     name: string
 }
 
-export interface IProductOutputDTO{
+export interface IProductOutputDTO {
     message: string
-} 
-export interface ICreateTagInputDTO {
+}
+
+export interface IAddTagInputDTO {
     token: string,
     id: string,
     tagName: string
+}
+
+export interface IAddTagOutputDTO {
+    message: string,
 }
 
 export interface ITagsProductsDB {
     id: string,
     product_id: string,
     tag_id: string,
-}
+} 
