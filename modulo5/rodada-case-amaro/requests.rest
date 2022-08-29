@@ -25,5 +25,19 @@ Content-Type: application/json
 }
 
 ### Endpoint get products
-GET http://localhost:3003/products?search=
+GET http://localhost:3003/products?search=8314
+
+
+
+
+### Endpoint create product
+POST http://localhost:3003/products
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFiMDM1YWE5LTM4YWEtNGNhMy05MTM4LTRiYTc1MGI1MzJjMCIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjE3NzM2MTQsImV4cCI6MTY2MTg2MDAxNH0.G42fGBD9tKNHTNMdnk7visuhFPwY3DT7t99Vyk2OfIQ
+
+{
+    "name": "Vestido azul"
+}
+### Endpoint search products by tag
+GET http://localhost:3003/products/tag?search=balada
 

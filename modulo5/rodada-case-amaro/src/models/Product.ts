@@ -67,13 +67,13 @@ export interface IProductOutputDTO {
     message: string
 }
 
-export interface IAddTagInputDTO {
+export interface ICreateTagInputDTO {
     token: string,
     id: string,
     tagName: string
 }
 
-export interface IAddTagOutputDTO {
+export interface ICreateTagOutputDTO {
     message: string,
 }
 
@@ -82,3 +82,11 @@ export interface ITagsProductsDB {
     product_id: string,
     tag_id: string,
 } 
+export interface IDeleteInputDTO {
+    token: string,
+    productId: string
+}
+
+export interface IDeleteOutputDTO {
+    message: string
+}
