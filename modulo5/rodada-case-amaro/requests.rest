@@ -25,7 +25,7 @@ Content-Type: application/json
 }
 
 ### Endpoint get products
-GET http://localhost:3003/products?search=8314
+GET http://localhost:3003/products?search=
 
 
 
@@ -39,5 +39,5 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFiMDM1YWE5LTM4YWEt
     "name": "Vestido azul"
 }
 ### Endpoint search products by tag
-GET http://localhost:3003/products/tag?search=balada
+GET http://localhost:3003/products/tag?search=casual
 
