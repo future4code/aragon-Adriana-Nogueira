@@ -1,0 +1,24 @@
+.App {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.button {
+  align-self: center;
+  width: 15em;
+  padding: 1em;
+  font-size: 1em;
+  border: 0px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(255,0,0,1);
+  margin-top: 0em;
+  
+}
+
+.button:hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  cursor: pointer;
+}
