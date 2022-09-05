@@ -1,30 +1,36 @@
-# Getting Started with Create React App
+Sobre o desafio
+O objetivo é construir uma aplicação web front-end que mostre os Resultados das Loterias.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+ReactJs
+TypeScript
+Testing library
+Axios
+rocket Como rodar este projeto
+Para clonar e executar este aplicativo, você precisará de Git, NodeJs Instalado em seu computador.
 
-In the project directory, you can run:
 
-### `npm start`
+# Instale as dependências
+$ npm start 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+# O frontend da aplicação inciará na porta:3000 - acesse:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# http://localhost:3000
+hammer_and_wrench Funcionalidades da aplicação
+A aplicação terá que suportar 6 sorteios: Mega-sena, Quina, Lotofácil, Lotomania, Timemania e Dia de sorte
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+Ao mudar esse combo-box, terá que mudar o tema do sorteio, números sorteados
+
+
+
+O consumo da API pode ser feito via REST 
+
+
+
+API: https://brainn-api-loterias.herokuapp.com
