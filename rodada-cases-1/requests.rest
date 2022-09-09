@@ -1,0 +1,53 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+### 1) Signup
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "name": "drica1",
+    "email": "drica@gmail.com",
+    "password": "drica99"
+}
+
+### 2) Login
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email": "drica@gmail.com",
+    "password": "drica99"
+}
+
+### Endpoint create show
+POST http://localhost:3003/shows
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0NDdiNWU1LWU1MGUtNDU0OS05NTQzLWYyMGIyNDEyNjVkZiIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjExMTg5MTUsImV4cCI6MTY2MTIwNTMxNX0.vKqV1YXoRAoeHN0l95KerWA7aPWbo5rSi2N6tbj_jSc
+Content-Type: application/json
+
+{
+    "band": "Banda Eva",
+    "startsAt": "2022/12/08"
+}
+
+### Endpoint get shows
+GET http://localhost:3003/shows
+
+
+### Endpoint buy ticket
+POST http://localhost:3003/shows/ticket
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0NDdiNWU1LWU1MGUtNDU0OS05NTQzLWYyMGIyNDEyNjVkZiIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjExMTg5MTUsImV4cCI6MTY2MTIwNTMxNX0.vKqV1YXoRAoeHN0l95KerWA7aPWbo5rSi2N6tbj_jSc
+Content-Type: application/json
+
+{
+    "showId": "202"
+}
+
+
+
+
+### Endpoint delete ticket
+DELETE http://localhost:3003/shows/ticket/201
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRhMDllNzIyLWFhOWItNGVmZS1iYjc0LWE0YzQ1MTU0YjJjNCIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjExMTgxODEsImV4cCI6MTY2MTIwNDU4MX0.6maIcnooYvZhbN4XtmaQ_a21TYvx2XOnnYqUj32oUbk
+
+
