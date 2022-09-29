@@ -6,8 +6,8 @@ ReactJs
 TypeScript
 Testing library
 Axios
-rocket Como rodar este projeto
-Para clonar e executar este aplicativo, você precisará de Git, NodeJs Instalado em seu computador.
+
+
 
 
 # Instale as dependências
@@ -20,7 +20,7 @@ $ npm start
 # O frontend da aplicação inciará na porta:3000 - acesse:
 
 # http://localhost:3000
-hammer_and_wrench Funcionalidades da aplicação
+
 A aplicação terá que suportar 6 sorteios: Mega-sena, Quina, Lotofácil, Lotomania, Timemania e Dia de sorte
 
 

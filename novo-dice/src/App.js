@@ -1,5 +1,3 @@
-
-
 import './App.css';
 import Dices from './components/Dice';
 
